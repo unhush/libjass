@@ -993,34 +993,43 @@ module libjass.renderers {
 
 				var increment = (!this._settings.preciseOutlines && this._gaussianBlur > 0) ? this._gaussianBlur : 1;
 
-				((addOutline: (x: number, y: number) => void) => {
+				function generateRadiiPairs(): Generator<number[]> {
 					if (outlineWidth <= outlineHeight) {
 						if (outlineWidth > 0) {
 							for (var x = 0; x <= outlineWidth; x += increment) {
-								addOutline(x, outlineHeight / outlineWidth * Math.sqrt(outlineWidth * outlineWidth - x * x));
+								_yield ([x, outlineHeight / outlineWidth * Math.sqrt(outlineWidth * outlineWidth - x * x)]);
 							}
 							if (x !== outlineWidth + increment) {
-								addOutline(outlineWidth, 0);
+								_yield ([outlineWidth, 0]);
 							}
 						}
 						else {
-							addOutline(0, outlineHeight);
+							_yield ([0, outlineHeight]);
 						}
 					}
 					else {
 						if (outlineHeight > 0) {
 							for (var y = 0; y <= outlineHeight; y += increment) {
-								addOutline(outlineWidth / outlineHeight * Math.sqrt(outlineHeight * outlineHeight - y * y), y);
+								_yield ([outlineWidth / outlineHeight * Math.sqrt(outlineHeight * outlineHeight - y * y), y]);
 							}
 							if (y !== outlineHeight + increment) {
-								addOutline(0, outlineHeight);
+								_yield ([0, outlineHeight]);
 							}
 						}
 						else {
-							addOutline(outlineWidth, 0);
+							_yield ([outlineWidth, 0]);
 						}
 					}
-				})((x: number, y: number): void => {
+
+					return null;
+				}
+
+				var radiiPairs = generateRadiiPairs();
+				var radii: { value: number[]; done: boolean };
+				while (!(radii = radiiPairs.next()).done) {
+					var x = radii.value[0];
+					var y = radii.value[1];
+
 					outlineFilter +=
 						'\t<feMorphology in="SourceAlpha" operator="dilate" radius="' + x.toFixed(3) + ' ' + y.toFixed(3) + '" result="outline' + outlineNumber + '" />\n';
 
@@ -1028,7 +1037,7 @@ module libjass.renderers {
 						'\t\t<feMergeNode in="outline' + outlineNumber + '" />\n';
 
 					outlineNumber++;
-				});
+				}
 
 				outlineFilter +=
 					'\t<feMerge result="outline">\n' +

@@ -29,6 +29,12 @@ interface Global {
 
 declare var global: Global; // Defined as a parameter of the anonymous function wrapper
 
+declare function _yield(parameter: any): any;
+
+interface Generator<T> {
+	next(): { value: T; done: boolean };
+}
+
 module libjass {
 	/**
 	 * Set implementation for browsers that don't support it. Only supports Number and String elements.

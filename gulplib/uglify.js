@@ -130,6 +130,36 @@ module.exports = {
 					}
 				}));
 
+				// 5. yield
+				root.walk(new UglifyJS.TreeWalker(function (node, descend) {
+					if (
+						node instanceof UglifyJS.AST_Call &&
+						node.expression.name === "_yield"
+					) {
+						node.expression.thedef.name = "yield";
+						for (var i = 0; ; i++) {
+							var parent = this.parent(i);
+							if (parent instanceof UglifyJS.AST_Defun) {
+								if (parent.name.modded === undefined) {
+									parent.name.modded = true;
+									var oldPrint = parent.name.print;
+									parent.name.print = function () {
+										this.thedef.name = "*" + parent.name.thedef.name;
+										oldPrint.apply(this, arguments);
+										this.thedef.name = this.thedef.name.substr(1);
+									};
+									parent.body.pop();
+								}
+
+								return;
+							}
+							else if (parent === undefined) {
+								return;
+							}
+						}
+					}
+				}));
+
 				// Output
 				var firstLicenseHeaderFound = false; // To detect and preserve the first license header
 
@@ -173,7 +203,7 @@ module.exports = {
 				var stream = UglifyJS.OutputStream(output);
 				root.print(stream);
 
-				codeFile.contents = Buffer.concat([new Buffer(stream.toString()), new Buffer("\n//# sourceMappingURL="), new Buffer(sourceMapFile.relative)]);
+				codeFile.contents = Buffer.concat([new Buffer(require("regenerator")(stream.toString(), { includeRuntime: true })), new Buffer("\n//# sourceMappingURL="), new Buffer(sourceMapFile.relative)]);
 				this.push(codeFile);
 
 				output.source_map.get()._sources.toArray().forEach(function (filename) {
