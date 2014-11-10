@@ -81,7 +81,20 @@ module.exports = {
 					}
 				}));
 
-				// 2. All but the first top-level "var __extends = ..."
+				// 2. Remove the "libjass" parameter from all namespace closures
+				root.walk(new UglifyJS.TreeWalker(function (node, descend) {
+					if (
+						node instanceof UglifyJS.AST_Call &&
+						node.expression instanceof UglifyJS.AST_Lambda &&
+						node.expression.argnames.length === 1 &&
+						node.expression.argnames[0].name === "libjass"
+					) {
+						node.expression.argnames = [];
+						node.args = [];
+					}
+				}));
+
+				// 3. All but the first top-level "var __extends = ..."
 				var firstVarExtendsFound = false;
 				root.walk(new UglifyJS.TreeWalker(function (node, descend) {
 					if (node instanceof UglifyJS.AST_Var && node.definitions[0].name.name === "__extends") {
@@ -98,7 +111,7 @@ module.exports = {
 
 				// Repeat because removing some declarations may make others unreferenced
 				for (;;) {
-					// 3. Unreferenced variable and function declarations, and unreferenced terminal function arguments
+					// 4. Unreferenced variable and function declarations, and unreferenced terminal function arguments
 					root.walk(new UglifyJS.TreeWalker(function (node, descend) {
 						if (node instanceof UglifyJS.AST_SymbolDeclaration && node.unreferenced()) {
 							if (node instanceof UglifyJS.AST_SymbolFunarg) {
@@ -131,7 +144,7 @@ module.exports = {
 					root.figure_out_scope({ screw_ie8: true });
 				}
 
-				// 4. Rename all function arguments that begin with _ to not have the _.
+				// 5. Rename all function arguments that begin with _ to not have the _.
 				// This converts the TypeScript syntax of declaring private members in the constructor declaration `function Color(private _red: number, ...)` to `function Color(red, ...)`
 				// so that it matches the JSDoc (and looks nicer).
 				root.walk(new UglifyJS.TreeWalker(function (node, descend) {
@@ -144,7 +157,7 @@ module.exports = {
 					}
 				}));
 
-				// 5. Fixup anonymous functions to print a space after "function"
+				// 6. Fixup anonymous functions to print a space after "function"
 				root.walk(new UglifyJS.TreeWalker(function (node, descend) {
 					if (node instanceof UglifyJS.AST_Lambda && !node.name) {
 						node.name = Object.create(UglifyJS.AST_Node.prototype);
@@ -152,7 +165,7 @@ module.exports = {
 					}
 				}));
 
-				// 6. Find the first license header
+				// 7. Find the first license header
 				var licenseHeader = null;
 				root.walk(new UglifyJS.TreeWalker(function (node, descend) {
 					if (licenseHeader !== null) {

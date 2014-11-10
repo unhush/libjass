@@ -104,7 +104,7 @@ gulp.task("libjass.js", function (callback) {
 
 	return gulp.src("./libjass.ts", { read: false })
 		.pipe(TypeScript.gulp("/libjass.js", "/libjass.js.map", ASTModifer))
-		.pipe(UglifyJS.fixup())
+		//.pipe(UglifyJS.fixup())
 		.pipe(gulp.dest("."));
 });
 
