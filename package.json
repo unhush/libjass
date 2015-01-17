@@ -26,7 +26,7 @@
 	"dependencies": {
 		"gulp": "latest",
 		"mocha": "2.1.x",
-		"typescript": "1.4.1",
+		"typescript-github": "https://github.com/Arnavion/typescript-github/tarball/2015-01-16-1e8e65c8396c29403023ad52bf3501f13b08f3f4",
 		"uglify-js": "2.x >=2.4.14",
 		"vinyl": "latest"
 	}

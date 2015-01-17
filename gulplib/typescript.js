@@ -26,7 +26,7 @@ var Vinyl = require("vinyl");
 
 var Transform = require("./helpers.js").Transform;
 
-var typeScriptModulePath = path.resolve("./node_modules/typescript/bin");
+var typeScriptModulePath = path.resolve("./node_modules/typescript-github");
 var typeScriptJsPath = path.join(typeScriptModulePath, "typescriptServices.js");
 
 var ts = {};
@@ -167,7 +167,6 @@ var Compiler = function () {
 		this._host = host;
 
 		this._program = null;
-		this._checker = null;
 	}
 
 	Compiler.prototype.addFile = function (file) {
@@ -188,9 +187,9 @@ var Compiler = function () {
 			throw new Error("There were one or more errors.");
 		}
 
-		this._checker = this._program.getTypeChecker(true);
+		var checker = this._program.getTypeChecker(true);
 
-		var errors = this._checker.getDiagnostics();
+		var errors = checker.getDiagnostics();
 		if (this._reportErrors(errors)) {
 			throw new Error("There were one or more errors.");
 		}
@@ -199,7 +198,7 @@ var Compiler = function () {
 	Compiler.prototype.writeFiles = function (outputCodePath, outputSourceMapPath, outputStream) {
 		this._host.setOutputs(outputCodePath, outputSourceMapPath, outputStream);
 
-		var emitErrors = this._checker.emitFiles().diagnostics;
+		var emitErrors = this._program.emitFiles().diagnostics;
 		if (this._reportErrors(emitErrors)) {
 			throw new Error("There were one or more errors.");
 		}
@@ -627,11 +626,13 @@ var Walker = function () {
 
 	Walker.prototype._walk = function (node) {
 		switch (node.kind) {
-			case ts.SyntaxKind.Property:
+			case ts.SyntaxKind.PropertySignature:
+			case ts.SyntaxKind.PropertyDeclaration:
 				this._visitProperty(node);
 				break;
 
-			case ts.SyntaxKind.Method:
+			case ts.SyntaxKind.MethodSignature:
+			case ts.SyntaxKind.MethodDeclaration:
 				this._visitMethod(node);
 				break;
 
@@ -798,7 +799,7 @@ var Walker = function () {
 	Walker.prototype._visitVariableStatement = function (node) {
 		var jsDoc = this._parseJSDoc(node);
 
-		if (node.declarations.length > 1) {
+		if (node.declarationList.declarations.length > 1) {
 			return;
 		}
 
@@ -806,7 +807,7 @@ var Walker = function () {
 			return;
 		}
 
-		var declaration = node.declarations[0];
+		var declaration = node.declarationList.declarations[0];
 
 		var variable = this._scope.enter(new Variable(declaration.name.text, node, jsDoc.rootDescription, jsDoc.typeAnnotation));
 
@@ -1406,4 +1407,21 @@ ts.writeCommentRange = function (currentSourceFile, writer, comment, newLine) {
 	}
 
 	return oldWriteCommentRange(currentSourceFile, writer, comment, newLine);
+};
+
+// Workaround for https://github.com/Microsoft/TypeScript/issues/1545
+ts.createEmitHostFromProgram = function (program) {
+	var compilerHost = program.getCompilerHost();
+
+	return {
+		getCanonicalFileName: function (fileName) { return compilerHost.getCanonicalFileName(fileName); },
+		getCommonSourceDirectory: function () { return program.getCommonSourceDirectory(); },
+		getCompilerOptions: function () { return program.getCompilerOptions(); },
+		getCurrentDirectory: function () { return compilerHost.getCurrentDirectory(); },
+		getNewLine: function () { return compilerHost.getNewLine(); },
+		getSourceFile: function (filename) { return program.getSourceFile(filename); },
+		getSourceFiles: function () { return program.getSourceFiles(); },
+		isEmitBlocked: function (sourceFile) { return program.isEmitBlocked(sourceFile); },
+		writeFile: function (filename, data, writeByteOrderMark, onError) { return compilerHost.writeFile(filename, data, writeByteOrderMark, onError); },
+	};
 };
