@@ -533,7 +533,7 @@ module libjass.renderers {
 
 			sub.setAttribute("data-dialogue-id", `${ this.id }-${ dialogue.id }`);
 
-			this._preRenderedSubs.set(dialogue.id, { sub: sub, animationDelays: animationCollection.animationDelays });
+			this._preRenderedSubs.set(dialogue.id, { sub, animationDelays: animationCollection.animationDelays });
 		}
 
 		/**

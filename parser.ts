@@ -387,7 +387,7 @@ module libjass.parser {
 		var name = line.substr(0, colonPos);
 		var value = line.substr(colonPos + 1).replace(/^\s+/, "");
 
-		return { name: name, value: value };
+		return { name, value };
 	}
 
 	/**
@@ -414,7 +414,7 @@ module libjass.parser {
 			template.set(formatKey, value[index]);
 		});
 
-		return { type: property.name, template: template };
+		return { type: property.name, template };
 	}
 
 	/**
@@ -425,17 +425,17 @@ module libjass.parser {
 	 * @return {*} The value returned depends on the rule used.
 	 */
 	export function parse(input: string, rule: string): any {
-		var run = new ParserRun(input, rule);
+		var { result } = new ParserRun(input, rule);
 
-		if (run.result === null || run.result.end !== input.length) {
+		if (result === null || result.end !== input.length) {
 			if (libjass.debugMode) {
-				console.error("Parse failed. %s %s %o", rule, input, run.result);
+				console.error("Parse failed. %s %s %o", rule, input, result);
 			}
 
 			throw new Error("Parse failed.");
 		}
 
-		return run.result.value;
+		return result.value;
 	}
 
 	/**
