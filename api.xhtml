@@ -4,16 +4,16 @@
 		<title>libjass API Documentation</title>
 		<style type="text/css">
 		<![CDATA[
-			html, body, .namespaces, .content {
+			html, body, .navigation, .content {
 				height: 100%;
 				margin: 0;
 			}
 
-			.namespaces, .content {
+			.navigation, .content {
 				overflow-y: scroll;
 			}
 
-			.namespaces {
+			.navigation {
 				float: left;
 				background-color: white;
 				padding: 0 20px;
@@ -144,19 +144,12 @@
 		</script>
 	</head>
 	<body>
-		<nav class="namespaces">
+		<nav class="navigation">
 			<label><input type="checkbox" id="show-private" />Show private</label>
+
 			<h2>Namespaces</h2>
 			<span class="namespace"><a href="#libjass">libjass</a></span>
 			<ul class="namespace-elements">
-				<li><a href="#libjass.Map">Map</a></li>
-				<li><a href="#libjass.Promise">Promise</a></li>
-				<li><a href="#libjass.Set">Set</a></li>
-				<li><a href="#libjass.debugMode">debugMode</a></li>
-				<li><a href="#libjass.verboseMode">verboseMode</a></li>
-				<li><a href="#libjass.mixin">mixin</a></li>
-				<li><a href="#libjass.Property">Property</a></li>
-				<li><a href="#libjass.TypedTemplate">TypedTemplate</a></li>
 				<li><a href="#libjass.ASS">ASS</a></li>
 				<li><a href="#libjass.DeferredPromise">DeferredPromise</a></li>
 				<li><a href="#libjass.Dialogue">Dialogue</a></li>
@@ -165,11 +158,6 @@
 				<li><a href="#libjass.BorderStyle">BorderStyle</a></li>
 				<li><a href="#libjass.Format">Format</a></li>
 				<li><a href="#libjass.WrappingStyle">WrappingStyle</a></li>
-				<li class="private"><a href="#libjass._valueOrDefault">_valueOrDefault</a></li>
-				<li class="private"><a href="#libjass.SimpleMap">SimpleMap</a></li>
-				<li class="private"><a href="#libjass.SimplePromise">SimplePromise</a></li>
-				<li class="private"><a href="#libjass.SimpleSet">SimpleSet</a></li>
-				<li class="private"><a href="#libjass.SimplePromiseState">SimplePromiseState</a></li>
 			</ul>
 
 			<span class="namespace"><a href="#libjass.parser">libjass.parser</a></span>
@@ -265,11 +253,12 @@
 				<li><a href="#libjass.renderers.VideoClock">VideoClock</a></li>
 				<li><a href="#libjass.renderers.WebRenderer">WebRenderer</a></li>
 				<li><a href="#libjass.renderers.ClockEvent">ClockEvent</a></li>
-				<li class="private"><a href="#libjass.renderers.AnimationCollection">AnimationCollection</a></li>
-				<li class="private"><a href="#libjass.renderers.DrawingStyles">DrawingStyles</a></li>
-				<li class="private"><a href="#libjass.renderers.Keyframe">Keyframe</a></li>
-				<li class="private"><a href="#libjass.renderers.SpanStyles">SpanStyles</a></li>
-				<li class="private"><a href="#libjass.renderers.VideoState">VideoState</a></li>
+			</ul>
+
+			<span class="namespace"><a href="#libjass.settings">libjass.settings</a></span>
+			<ul class="namespace-elements">
+				<li><a href="#libjass.settings.debugMode">debugMode</a></li>
+				<li><a href="#libjass.settings.verboseMode">verboseMode</a></li>
 			</ul>
 
 			<span class="namespace"><a href="#libjass.webworker">libjass.webworker</a></span>
@@ -287,166 +276,79 @@
 				<li class="private"><a href="#libjass.webworker.WorkerChannelImpl">WorkerChannelImpl</a></li>
 			</ul>
 
+			<h2>Modules</h2>
+			<span class="module"><a href="#./renderers/clocks">./renderers/clocks</a></span>
+			<ul class="module-elements">
+				<li class="private"><a href="#./renderers/clocks.VideoState">VideoState</a></li>
+			</ul>
+
+			<span class="module"><a href="#./renderers/web/animation-collection">./renderers/web/animation-collection</a></span>
+			<ul class="module-elements">
+				<li><a href="#./renderers/web/animation-collection.AnimationCollection">AnimationCollection</a></li>
+			</ul>
+
+			<span class="module"><a href="#./renderers/web/dom-parser">./renderers/web/dom-parser</a></span>
+			<ul class="module-elements">
+				<li><a href="#./renderers/web/dom-parser.domParser">domParser</a></li>
+			</ul>
+
+			<span class="module"><a href="#./renderers/web/drawing-styles">./renderers/web/drawing-styles</a></span>
+			<ul class="module-elements">
+				<li><a href="#./renderers/web/drawing-styles.DrawingStyles">DrawingStyles</a></li>
+			</ul>
+
+			<span class="module"><a href="#./renderers/web/keyframe">./renderers/web/keyframe</a></span>
+			<ul class="module-elements">
+				<li><a href="#./renderers/web/keyframe.Keyframe">Keyframe</a></li>
+			</ul>
+
+			<span class="module"><a href="#./renderers/web/renderer">./renderers/web/renderer</a></span>
+			<ul class="module-elements">
+				<li class="private"><a href="#./renderers/web/renderer.PreRenderedSub">PreRenderedSub</a></li>
+			</ul>
+
+			<span class="module"><a href="#./renderers/web/span-styles">./renderers/web/span-styles</a></span>
+			<ul class="module-elements">
+				<li><a href="#./renderers/web/span-styles.SpanStyles">SpanStyles</a></li>
+			</ul>
+
+			<span class="module"><a href="#./types/misc">./types/misc</a></span>
+			<ul class="module-elements">
+				<li><a href="#./types/misc.valueOrDefault">valueOrDefault</a></li>
+				<li><a href="#./types/misc.Property">Property</a></li>
+				<li><a href="#./types/misc.TypedTemplate">TypedTemplate</a></li>
+			</ul>
+
+			<span class="module"><a href="#./utility/map">./utility/map</a></span>
+			<ul class="module-elements">
+				<li><a href="#./utility/map.Map">Map</a></li>
+				<li class="private"><a href="#./utility/map.SimpleMap">SimpleMap</a></li>
+			</ul>
+
+			<span class="module"><a href="#./utility/mixin">./utility/mixin</a></span>
+			<ul class="module-elements">
+				<li><a href="#./utility/mixin.mixin">mixin</a></li>
+			</ul>
+
+			<span class="module"><a href="#./utility/promise">./utility/promise</a></span>
+			<ul class="module-elements">
+				<li><a href="#./utility/promise.Promise">Promise</a></li>
+				<li class="private"><a href="#./utility/promise.SimplePromise">SimplePromise</a></li>
+				<li class="private"><a href="#./utility/promise.SimplePromiseState">SimplePromiseState</a></li>
+			</ul>
+
+			<span class="module"><a href="#./utility/set">./utility/set</a></span>
+			<ul class="module-elements">
+				<li><a href="#./utility/set.Set">Set</a></li>
+				<li class="private"><a href="#./utility/set.SimpleSet">SimpleSet</a></li>
+			</ul>
+
 		</nav>
+
 		<div class="content">
 
 			<section>
-				<h1 id="libjass">libjass</h1>
-
-				<section>
-					<h2>Variables</h2>
-					<dl id="libjass.Map" class="variable">
-						<dt class="name"><a href="#libjass.Map">Map</a></dt>
-						<dd class="description">
-							<p>Set to browser's implementation of Map if it has one, else set to <a href="#libjass.SimpleMap">libjass.SimpleMap</a></p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.Map;
-libjass.Map = value;</code></pre></fieldset></dd>
-						<dd class="return type">function(new:Map, !Array.&lt;!Array.&lt;*&gt;&gt;=)</dd>
-					</dl>
-					<dl id="libjass.Promise" class="variable">
-						<dt class="name"><a href="#libjass.Promise">Promise</a></dt>
-						<dd class="description">
-							<p>Set to browser's implementation of Promise if it has one, else set to <a href="#libjass.SimplePromise">libjass.SimplePromise</a></p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.Promise;
-libjass.Promise = value;</code></pre></fieldset></dd>
-						<dd class="return type">function(new:Promise)</dd>
-					</dl>
-					<dl id="libjass.Set" class="variable">
-						<dt class="name"><a href="#libjass.Set">Set</a></dt>
-						<dd class="description">
-							<p>Set to browser's implementation of Set if it has one, else set to <a href="#libjass.SimpleSet">libjass.SimpleSet</a></p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.Set;
-libjass.Set = value;</code></pre></fieldset></dd>
-						<dd class="return type">function(new:Set, !Array.&lt;T&gt;=)</dd>
-					</dl>
-					<dl id="libjass.debugMode" class="variable">
-						<dt class="name"><a href="#libjass.debugMode">debugMode</a></dt>
-						<dd class="description">
-							<p>Debug mode. When true, libjass logs some debug messages.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.debugMode;
-libjass.debugMode = value;</code></pre></fieldset></dd>
-						<dd class="return type">boolean</dd>
-					</dl>
-					<dl id="libjass.verboseMode" class="variable">
-						<dt class="name"><a href="#libjass.verboseMode">verboseMode</a></dt>
-						<dd class="description">
-							<p>Verbose debug mode. When true, libjass logs some more debug messages. This setting is independent of <a href="#libjass.debugMode">libjass.debugMode</a></p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.verboseMode;
-libjass.verboseMode = value;</code></pre></fieldset></dd>
-						<dd class="return type">boolean</dd>
-					</dl>
-				</section>
-
-				<section>
-					<h2>Free functions</h2>
-					<dl id="libjass.mixin" class="function">
-						<dt class="name"><a href="#libjass.mixin">mixin</a></dt>
-						<dd class="description">
-							<p>Adds properties of the given mixins' prototypes to the given class's prototype.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>libjass.mixin(clazz, mixins);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">clazz</dt>
-								<dd class="parameter type">!*</dd>
-								<dd class="parameter description"></dd>
-								<dt class="parameter name">mixins</dt>
-								<dd class="parameter type">!Array.&lt;*&gt;</dd>
-								<dd class="parameter description"></dd>
-							</dl>
-						</dd>
-					</dl>
-					<dl id="libjass._valueOrDefault" class="function private">
-						<dt class="name"><a href="#libjass._valueOrDefault">_valueOrDefault.&lt;T&gt;</a></dt>
-						<dd class="description">
-							<p></p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var result = _valueOrDefault(template, key, converter, validator, defaultValue);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">template</dt>
-								<dd class="parameter type">!Map.&lt;string, string&gt;</dd>
-								<dd class="parameter description"></dd>
-								<dt class="parameter name">key</dt>
-								<dd class="parameter type">string</dd>
-								<dd class="parameter description"></dd>
-								<dt class="parameter name">converter</dt>
-								<dd class="parameter type">function(string):T</dd>
-								<dd class="parameter description"></dd>
-								<dt class="parameter name">validator</dt>
-								<dd class="parameter type">?function(T):boolean</dd>
-								<dd class="parameter description"></dd>
-								<dt class="parameter name">defaultValue</dt>
-								<dd class="parameter type">T</dd>
-								<dd class="parameter description"></dd>
-							</dl>
-						</dd>
-						<dt>Returns</dt>
-						<dd class="return type">T</dd>
-						<dd class="return description"></dd>
-					</dl>
-				</section>
-
-				<section>
-					<h2>Interfaces</h2>
-					<dl id="libjass.Property" class="interface">
-						<dt class="name">interface <a href="#libjass.Property">Property</a></dt>
-						<dd class="description">
-							<p>A property.</p>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.Property.name" class="variable">
-								<dt class="name"><a href="#libjass.Property.name">name</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = property.name;
-property.name = value;</code></pre></fieldset></dd>
-								<dd class="return type">string</dd>
-							</dl>
-							<dl id="libjass.Property.value" class="variable">
-								<dt class="name"><a href="#libjass.Property.value">value</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = property.value;
-property.value = value;</code></pre></fieldset></dd>
-								<dd class="return type">string</dd>
-							</dl>
-						</dd>
-					</dl>
-					<dl id="libjass.TypedTemplate" class="interface">
-						<dt class="name">interface <a href="#libjass.TypedTemplate">TypedTemplate</a></dt>
-						<dd class="description">
-							<p>A template object with a particular type.</p>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.TypedTemplate.template" class="variable">
-								<dt class="name"><a href="#libjass.TypedTemplate.template">template</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = typedTemplate.template;
-typedTemplate.template = value;</code></pre></fieldset></dd>
-								<dd class="return type">!Map.&lt;string, string&gt;</dd>
-							</dl>
-							<dl id="libjass.TypedTemplate.type" class="variable">
-								<dt class="name"><a href="#libjass.TypedTemplate.type">type</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = typedTemplate.type;
-typedTemplate.type = value;</code></pre></fieldset></dd>
-								<dd class="return type">string</dd>
-							</dl>
-						</dd>
-					</dl>
-				</section>
+				<h1 id="libjass">Namespace libjass</h1>
 
 				<section>
 					<h2>Classes</h2>
@@ -1165,448 +1067,6 @@ typedTemplate.type = value;</code></pre></fieldset></dd>
 							</dl>
 						</dd>
 					</dl>
-					<dl id="libjass.SimpleMap" class="constructor private">
-						<dt class="name">class <a href="#libjass.SimpleMap">SimpleMap.&lt;K, V&gt;</a></dt>
-						<dd class="description">
-							<p>Map implementation for browsers that don't support it. Only supports keys which are of Number or String type, or which have a property called "id".
-Keys and values are stored as properties of an object, with property names derived from the key type.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var simpleMap = new SimpleMap(iterable);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">iterable</dt>
-								<dd class="parameter type">!Array.&lt;!Array.&lt;*&gt;&gt;=</dd>
-								<dd class="parameter description">Only an array of elements (where each element is a 2-tuple of key and value) is supported.</dd>
-							</dl>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.SimpleMap.size" class="property">
-								<dt class="name"><a href="#libjass.SimpleMap.size">size</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.size;</code></pre></fieldset></dd>
-								<dd class="return type">number</dd>
-							</dl>
-							<dl id="libjass.SimpleMap.clear" class="function">
-								<dt class="name"><a href="#libjass.SimpleMap.clear">clear</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simpleMap.clear();</code></pre></fieldset></dd>
-							</dl>
-							<dl id="libjass.SimpleMap.delete" class="function">
-								<dt class="name"><a href="#libjass.SimpleMap.delete">delete</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.delete(key);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">key</dt>
-										<dd class="parameter type">K</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">boolean</dd>
-								<dd class="return description">true if the key was present before being deleted, false otherwise</dd>
-							</dl>
-							<dl id="libjass.SimpleMap.forEach" class="function">
-								<dt class="name"><a href="#libjass.SimpleMap.forEach">forEach</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simpleMap.forEach(callbackfn, thisArg);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">callbackfn</dt>
-										<dd class="parameter type">function(V, K, libjass.Map.&lt;K, V&gt;)</dd>
-										<dd class="parameter description">A function that is called with each key and value in the map.</dd>
-										<dt class="parameter name">thisArg</dt>
-										<dd class="parameter type">*</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.SimpleMap.get" class="function">
-								<dt class="name"><a href="#libjass.SimpleMap.get">get</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.get(key);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">key</dt>
-										<dd class="parameter type">K</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">V</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimpleMap.has" class="function">
-								<dt class="name"><a href="#libjass.SimpleMap.has">has</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.has(key);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">key</dt>
-										<dd class="parameter type">K</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">boolean</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimpleMap.set" class="function">
-								<dt class="name"><a href="#libjass.SimpleMap.set">set</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.set(key, value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">key</dt>
-										<dd class="parameter type">K</dd>
-										<dd class="parameter description"></dd>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">V</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">libjass.Map.&lt;K, V&gt;</dd>
-								<dd class="return description">This map</dd>
-							</dl>
-							<dl id="libjass.SimpleMap._keyToProperty" class="function private">
-								<dt class="name"><a href="#libjass.SimpleMap._keyToProperty">_keyToProperty</a></dt>
-								<dd class="description">
-									<p>Converts the given key into a property name for the internal map.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap._keyToProperty(key);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">key</dt>
-										<dd class="parameter type">K</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">string</dd>
-								<dd class="return description"></dd>
-							</dl>
-						</dd>
-					</dl>
-					<dl id="libjass.SimplePromise" class="constructor private">
-						<dt class="name">class <a href="#libjass.SimplePromise">SimplePromise.&lt;T&gt;</a></dt>
-						<dd class="description">
-							<p>Promise implementation for browsers that don't support it.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var simplePromise = new SimplePromise(resolver);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">resolver</dt>
-								<dd class="parameter type">function(function(T), function(*))</dd>
-								<dd class="parameter description"></dd>
-							</dl>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.SimplePromise.all" class="function static">
-								<dt class="name"><a href="#libjass.SimplePromise.all">all.&lt;T&gt;</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = SimplePromise.all(promises);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">promises</dt>
-										<dd class="parameter type">!Array.&lt;!Promise.&lt;T&gt;&gt;</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">!Promise.&lt;!Array.&lt;T&gt;&gt;</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise.isFulfilled" class="function">
-								<dt class="name"><a href="#libjass.SimplePromise.isFulfilled">isFulfilled</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.isFulfilled();</code></pre></fieldset></dd>
-								<dt>Returns</dt>
-								<dd class="return type">boolean</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise.isPending" class="function">
-								<dt class="name"><a href="#libjass.SimplePromise.isPending">isPending</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.isPending();</code></pre></fieldset></dd>
-								<dt>Returns</dt>
-								<dd class="return type">boolean</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise.isRejected" class="function">
-								<dt class="name"><a href="#libjass.SimplePromise.isRejected">isRejected</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.isRejected();</code></pre></fieldset></dd>
-								<dt>Returns</dt>
-								<dd class="return type">boolean</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise.reason" class="function">
-								<dt class="name"><a href="#libjass.SimplePromise.reason">reason</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.reason();</code></pre></fieldset></dd>
-								<dt>Returns</dt>
-								<dd class="return type">*</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise.resolve" class="function static">
-								<dt class="name"><a href="#libjass.SimplePromise.resolve">resolve.&lt;T&gt;</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = SimplePromise.resolve(value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">T</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">!Promise.&lt;T&gt;</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise.then" class="function">
-								<dt class="name"><a href="#libjass.SimplePromise.then">then.&lt;U&gt;</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.then(fulfilledHandler, rejectedHandler);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">fulfilledHandler</dt>
-										<dd class="parameter type">function(T):(U|Promise.&lt;U&gt;)</dd>
-										<dd class="parameter description"></dd>
-										<dt class="parameter name">rejectedHandler</dt>
-										<dd class="parameter type">?function(*):(U|Promise.&lt;U&gt;)</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">!Promise.&lt;U&gt;</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise.value" class="function">
-								<dt class="name"><a href="#libjass.SimplePromise.value">value</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.value();</code></pre></fieldset></dd>
-								<dt>Returns</dt>
-								<dd class="return type">T</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise._fulfill" class="function private">
-								<dt class="name"><a href="#libjass.SimplePromise._fulfill">_fulfill</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._fulfill(value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">T</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.SimplePromise._getThenMethod" class="function private static">
-								<dt class="name"><a href="#libjass.SimplePromise._getThenMethod">_getThenMethod.&lt;T&gt;</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = SimplePromise._getThenMethod(obj);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">obj</dt>
-										<dd class="parameter type">!*</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">?function(function(T):T, function(*):T):!Promise.&lt;T&gt;</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimplePromise._propagateResolution" class="function private">
-								<dt class="name"><a href="#libjass.SimplePromise._propagateResolution">_propagateResolution</a></dt>
-								<dd class="description">
-									<p>Propagates the result of the current promise to all its children.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._propagateResolution();</code></pre></fieldset></dd>
-							</dl>
-							<dl id="libjass.SimplePromise._reject" class="function private">
-								<dt class="name"><a href="#libjass.SimplePromise._reject">_reject</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._reject(reason);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">reason</dt>
-										<dd class="parameter type">*</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.SimplePromise._resolve" class="function private">
-								<dt class="name"><a href="#libjass.SimplePromise._resolve">_resolve</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._resolve(value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">T</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-						</dd>
-					</dl>
-					<dl id="libjass.SimpleSet" class="constructor private">
-						<dt class="name">class <a href="#libjass.SimpleSet">SimpleSet.&lt;T&gt;</a></dt>
-						<dd class="description">
-							<p>Set implementation for browsers that don't support it. Only supports Number and String elements.
-Elements are stored as properties of an object, with names derived from their type.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var simpleSet = new SimpleSet(iterable);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">iterable</dt>
-								<dd class="parameter type">!Array.&lt;T&gt;=</dd>
-								<dd class="parameter description">Only an array of values is supported.</dd>
-							</dl>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.SimpleSet.size" class="property">
-								<dt class="name"><a href="#libjass.SimpleSet.size">size</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet.size;</code></pre></fieldset></dd>
-								<dd class="return type">number</dd>
-							</dl>
-							<dl id="libjass.SimpleSet.add" class="function">
-								<dt class="name"><a href="#libjass.SimpleSet.add">add</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet.add(value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">T</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">libjass.Set.&lt;T&gt;</dd>
-								<dd class="return description">This set</dd>
-							</dl>
-							<dl id="libjass.SimpleSet.clear" class="function">
-								<dt class="name"><a href="#libjass.SimpleSet.clear">clear</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simpleSet.clear();</code></pre></fieldset></dd>
-							</dl>
-							<dl id="libjass.SimpleSet.delete" class="function">
-								<dt class="name"><a href="#libjass.SimpleSet.delete">delete</a></dt>
-								<dd class="description">
-									<p>Not implemented.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet.delete(value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">T</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">boolean</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimpleSet.forEach" class="function">
-								<dt class="name"><a href="#libjass.SimpleSet.forEach">forEach</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>simpleSet.forEach(callbackfn, thisArg);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">callbackfn</dt>
-										<dd class="parameter type">function(T, T, libjass.Set.&lt;T&gt;)</dd>
-										<dd class="parameter description">A function that is called with each value in the set.</dd>
-										<dt class="parameter name">thisArg</dt>
-										<dd class="parameter type">*</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.SimpleSet.has" class="function">
-								<dt class="name"><a href="#libjass.SimpleSet.has">has</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet.has(value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">T</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">boolean</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.SimpleSet._toProperty" class="function private">
-								<dt class="name"><a href="#libjass.SimpleSet._toProperty">_toProperty</a></dt>
-								<dd class="description">
-									<p>Converts the given value into a property name for the internal map.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet._toProperty(value);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">T</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">string</dd>
-								<dd class="return description"></dd>
-							</dl>
-						</dd>
-					</dl>
 				</section>
 
 				<section>
@@ -1683,37 +1143,11 @@ Elements are stored as properties of an object, with names derived from their ty
 							</dl>
 						</dd>
 					</dl>
-					<dl id="libjass.SimplePromiseState" class="enum private">
-						<dt class="name">enum <a href="#libjass.SimplePromiseState">SimplePromiseState</a></dt>
-						<dd class="description">
-							<p>The state of the <a href="#libjass.SimplePromise">libjass.SimplePromise</a></p>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.SimplePromiseState.PENDING" class="member">
-								<dt class="name"><a href="#libjass.SimplePromiseState.PENDING">PENDING</a> = 0</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-							</dl>
-							<dl id="libjass.SimplePromiseState.FULFILLED" class="member">
-								<dt class="name"><a href="#libjass.SimplePromiseState.FULFILLED">FULFILLED</a> = 1</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-							</dl>
-							<dl id="libjass.SimplePromiseState.REJECTED" class="member">
-								<dt class="name"><a href="#libjass.SimplePromiseState.REJECTED">REJECTED</a> = 2</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-							</dl>
-						</dd>
-					</dl>
 				</section>
 
 			</section>
 			<section>
-				<h1 id="libjass.parser">libjass.parser</h1>
+				<h1 id="libjass.parser">Namespace libjass.parser</h1>
 
 				<section>
 					<h2>Free functions</h2>
@@ -1740,7 +1174,7 @@ Elements are stored as properties of an object, with names derived from their ty
 					<dl id="libjass.parser.parseLineIntoProperty" class="function">
 						<dt class="name"><a href="#libjass.parser.parseLineIntoProperty">parseLineIntoProperty</a></dt>
 						<dd class="description">
-							<p>Parses a line into a <a href="#libjass.Property">libjass.Property</a>.</p>
+							<p>Parses a line into a <a href="#./types/misc.Property">./types/misc.Property</a>.</p>
 						</dd>
 						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.parser.parseLineIntoProperty(line);</code></pre></fieldset></dd>
 						<dd class="parameters">
@@ -1757,7 +1191,7 @@ Elements are stored as properties of an object, with names derived from their ty
 					<dl id="libjass.parser.parseLineIntoTypedTemplate" class="function">
 						<dt class="name"><a href="#libjass.parser.parseLineIntoTypedTemplate">parseLineIntoTypedTemplate</a></dt>
 						<dd class="description">
-							<p>Parses a line into a <a href="#libjass.TypedTemplate">libjass.TypedTemplate</a> according to the given format specifier.</p>
+							<p>Parses a line into a <a href="#./types/misc.TypedTemplate">./types/misc.TypedTemplate</a> according to the given format specifier.</p>
 						</dd>
 						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.parser.parseLineIntoTypedTemplate(line, formatSpecifier);</code></pre></fieldset></dd>
 						<dd class="parameters">
@@ -1814,7 +1248,7 @@ Elements are stored as properties of an object, with names derived from their ty
 								</dd>
 								<dd class="usage"><fieldset><legend /><pre><code>var result = stream.nextLine();</code></pre></fieldset></dd>
 								<dt>Returns</dt>
-								<dd class="return type">!Promise.&lt;string&gt;</dd>
+								<dd class="return type">!Promise.&lt;?string&gt;</dd>
 								<dd class="return description">A promise that will be resolved with the next line, or null if the stream is exhausted.</dd>
 							</dl>
 						</dd>
@@ -2009,7 +1443,7 @@ If the value is a string, then the end property is updated to be the length of t
 						</dd>
 					</dl>
 					<dl id="libjass.parser.StringStream" class="constructor">
-						<dt class="name">class <a href="#libjass.parser.StringStream">StringStream</a></dt>
+						<dt class="name">class <a href="#libjass.parser.StringStream">StringStream</a> implements <a href="#libjass.parser.Stream">Stream</a></dt>
 						<dd class="description">
 							<p>A <a href="#libjass.parser.Stream">libjass.parser.Stream</a> that reads from a string in memory.</p>
 						</dd>
@@ -2029,13 +1463,13 @@ If the value is a string, then the end property is updated to be the length of t
 								</dd>
 								<dd class="usage"><fieldset><legend /><pre><code>var result = stringStream.nextLine();</code></pre></fieldset></dd>
 								<dt>Returns</dt>
-								<dd class="return type">!Promise.&lt;string&gt;</dd>
+								<dd class="return type">!Promise.&lt;?string&gt;</dd>
 								<dd class="return description">A promise that will be resolved with the next line, or null if the string has been completely read.</dd>
 							</dl>
 						</dd>
 					</dl>
 					<dl id="libjass.parser.XhrStream" class="constructor">
-						<dt class="name">class <a href="#libjass.parser.XhrStream">XhrStream</a></dt>
+						<dt class="name">class <a href="#libjass.parser.XhrStream">XhrStream</a> implements <a href="#libjass.parser.Stream">Stream</a></dt>
 						<dd class="description">
 							<p>A <a href="#libjass.parser.Stream">libjass.parser.Stream</a> that reads from an XMLHttpRequest object.</p>
 						</dd>
@@ -2055,7 +1489,7 @@ If the value is a string, then the end property is updated to be the length of t
 								</dd>
 								<dd class="usage"><fieldset><legend /><pre><code>var result = xhrStream.nextLine();</code></pre></fieldset></dd>
 								<dt>Returns</dt>
-								<dd class="return type">!Promise.&lt;string&gt;</dd>
+								<dd class="return type">!Promise.&lt;?string&gt;</dd>
 								<dd class="return description">A promise that will be resolved with the next line, or null if the stream is exhausted.</dd>
 							</dl>
 							<dl id="libjass.parser.XhrStream._onXhrLoadEnd" class="function private">
@@ -2086,12 +1520,12 @@ If the value is a string, then the end property is updated to be the length of t
 									</dl>
 								</dd>
 							</dl>
-							<dl id="libjass.parser.XhrStream._reportNewLine" class="function private">
-								<dt class="name"><a href="#libjass.parser.XhrStream._reportNewLine">_reportNewLine</a></dt>
+							<dl id="libjass.parser.XhrStream._tryResolveNextLine" class="function private">
+								<dt class="name"><a href="#libjass.parser.XhrStream._tryResolveNextLine">_tryResolveNextLine</a></dt>
 								<dd class="description">
 									<p></p>
 								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>xhrStream._reportNewLine();</code></pre></fieldset></dd>
+								<dd class="usage"><fieldset><legend /><pre><code>xhrStream._tryResolveNextLine();</code></pre></fieldset></dd>
 							</dl>
 						</dd>
 					</dl>
@@ -2535,23 +1969,6 @@ If the value is a string, then the end property is updated to be the length of t
 									<p></p>
 								</dd>
 								<dd class="usage"><fieldset><legend /><pre><code>var result = parserRun.parse_tag_4c(parent);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">parent</dt>
-										<dd class="parameter type">!libjass.parser.ParseNode</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">libjass.parser.ParseNode</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.parser.ParserRun.parse_tag_K" class="function">
-								<dt class="name"><a href="#libjass.parser.ParserRun.parse_tag_K">parse_tag_K</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = parserRun.parse_tag_K(parent);</code></pre></fieldset></dd>
 								<dd class="parameters">
 									<dl>
 										<dt class="parameter name">parent</dt>
@@ -3022,6 +2439,23 @@ If the value is a string, then the end property is updated to be the length of t
 								<dd class="return type">libjass.parser.ParseNode</dd>
 								<dd class="return description"></dd>
 							</dl>
+							<dl id="libjass.parser.ParserRun.parse_tag_K" class="function">
+								<dt class="name"><a href="#libjass.parser.ParserRun.parse_tag_K">parse_tag_K</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = parserRun.parse_tag_K(parent);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">parent</dt>
+										<dd class="parameter type">!libjass.parser.ParseNode</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">libjass.parser.ParseNode</dd>
+								<dd class="return description"></dd>
+							</dl>
 							<dl id="libjass.parser.ParserRun.parse_tag_kf" class="function">
 								<dt class="name"><a href="#libjass.parser.ParserRun.parse_tag_kf">parse_tag_kf</a></dt>
 								<dd class="description">
@@ -3418,7 +2852,7 @@ If the value is a string, then the end property is updated to be the length of t
 
 			</section>
 			<section>
-				<h1 id="libjass.parts">libjass.parts</h1>
+				<h1 id="libjass.parts">Namespace libjass.parts</h1>
 
 				<section>
 					<h2>Interfaces</h2>
@@ -5122,7 +4556,7 @@ Instances of this class are immutable.</p>
 
 			</section>
 			<section>
-				<h1 id="libjass.parts.drawing">libjass.parts.drawing</h1>
+				<h1 id="libjass.parts.drawing">Namespace libjass.parts.drawing</h1>
 
 				<section>
 					<h2>Interfaces</h2>
@@ -5139,7 +4573,7 @@ Instances of this class are immutable.</p>
 				<section>
 					<h2>Classes</h2>
 					<dl id="libjass.parts.drawing.CubicBezierCurveInstruction" class="constructor">
-						<dt class="name">class <a href="#libjass.parts.drawing.CubicBezierCurveInstruction">CubicBezierCurveInstruction</a></dt>
+						<dt class="name">class <a href="#libjass.parts.drawing.CubicBezierCurveInstruction">CubicBezierCurveInstruction</a> implements <a href="#libjass.parts.drawing.Instruction">Instruction</a></dt>
 						<dd class="description">
 							<p>An instruction to draw a cubic bezier curve to a particular position, with two given control points.</p>
 						</dd>
@@ -5224,7 +4658,7 @@ Instances of this class are immutable.</p>
 						</dd>
 					</dl>
 					<dl id="libjass.parts.drawing.LineInstruction" class="constructor">
-						<dt class="name">class <a href="#libjass.parts.drawing.LineInstruction">LineInstruction</a></dt>
+						<dt class="name">class <a href="#libjass.parts.drawing.LineInstruction">LineInstruction</a> implements <a href="#libjass.parts.drawing.Instruction">Instruction</a></dt>
 						<dd class="description">
 							<p>An instruction to draw a line to a particular position.</p>
 						</dd>
@@ -5261,7 +4695,7 @@ Instances of this class are immutable.</p>
 						</dd>
 					</dl>
 					<dl id="libjass.parts.drawing.MoveInstruction" class="constructor">
-						<dt class="name">class <a href="#libjass.parts.drawing.MoveInstruction">MoveInstruction</a></dt>
+						<dt class="name">class <a href="#libjass.parts.drawing.MoveInstruction">MoveInstruction</a> implements <a href="#libjass.parts.drawing.Instruction">Instruction</a></dt>
 						<dd class="description">
 							<p>An instruction to move to a particular position.</p>
 						</dd>
@@ -5301,7 +4735,7 @@ Instances of this class are immutable.</p>
 
 			</section>
 			<section>
-				<h1 id="libjass.renderers">libjass.renderers</h1>
+				<h1 id="libjass.renderers">Namespace libjass.renderers</h1>
 
 				<section>
 					<h2>Interfaces</h2>
@@ -5518,7 +4952,7 @@ eventSource._eventListeners = value;</code></pre></fieldset></dd>
 						</dd>
 					</dl>
 					<dl id="libjass.renderers.ManualClock" class="constructor">
-						<dt class="name">class <a href="#libjass.renderers.ManualClock">ManualClock</a></dt>
+						<dt class="name">class <a href="#libjass.renderers.ManualClock">ManualClock</a> implements <a href="#libjass.renderers.Clock">Clock</a></dt>
 						<dd class="description">
 							<p>An implementation of <a href="#libjass.renderers.Clock">libjass.renderers.Clock</a> that allows user script to manually trigger play, pause and timeUpdate events.</p>
 						</dd>
@@ -5858,7 +5292,7 @@ manualClock.addEventListener = value;</code></pre></fieldset></dd>
 								<dt class="name"><a href="#libjass.renderers.RendererSettings.enableSvg">enableSvg</a></dt>
 								<dd class="description">
 									<p>Outlines and blur are implemented using SVG filters by default. When false, they will be rendered using alternative means.
-IE 11 and below do not support SVG filters on HTML elements so this should be set to false there.
+IE 11 and below do not support SVG filters on HTML elements so this should be set to false there. See http://caniuse.com/svg-html for details.
 Defaults to true.</p>
 								</dd>
 								<dd class="usage"><fieldset><legend /><pre><code>var result = rendererSettings.enableSvg;
@@ -5876,16 +5310,6 @@ convenience method to create a font map.</p>
 rendererSettings.fontMap = value;</code></pre></fieldset></dd>
 								<dd class="return type">!Map.&lt;string, !Array.&lt;string&gt;&gt;</dd>
 							</dl>
-							<dl id="libjass.renderers.RendererSettings.preRenderTime" class="variable">
-								<dt class="name"><a href="#libjass.renderers.RendererSettings.preRenderTime">preRenderTime</a></dt>
-								<dd class="description">
-									<p>Subtitles will be pre-rendered for this amount of time (seconds).
-Defaults to 5.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = rendererSettings.preRenderTime;
-rendererSettings.preRenderTime = value;</code></pre></fieldset></dd>
-								<dd class="return type">number</dd>
-							</dl>
 							<dl id="libjass.renderers.RendererSettings.preciseOutlines" class="variable">
 								<dt class="name"><a href="#libjass.renderers.RendererSettings.preciseOutlines">preciseOutlines</a></dt>
 								<dd class="description">
@@ -5895,6 +5319,16 @@ Defaults to false.</p>
 								<dd class="usage"><fieldset><legend /><pre><code>var result = rendererSettings.preciseOutlines;
 rendererSettings.preciseOutlines = value;</code></pre></fieldset></dd>
 								<dd class="return type">boolean</dd>
+							</dl>
+							<dl id="libjass.renderers.RendererSettings.preRenderTime" class="variable">
+								<dt class="name"><a href="#libjass.renderers.RendererSettings.preRenderTime">preRenderTime</a></dt>
+								<dd class="description">
+									<p>Subtitles will be pre-rendered for this amount of time (seconds).
+Defaults to 5.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = rendererSettings.preRenderTime;
+rendererSettings.preRenderTime = value;</code></pre></fieldset></dd>
+								<dd class="return type">number</dd>
 							</dl>
 							<dl id="libjass.renderers.RendererSettings.from" class="function static">
 								<dt class="name"><a href="#libjass.renderers.RendererSettings.from">from</a></dt>
@@ -5981,7 +5415,7 @@ For example:
 						</dd>
 					</dl>
 					<dl id="libjass.renderers.VideoClock" class="constructor">
-						<dt class="name">class <a href="#libjass.renderers.VideoClock">VideoClock</a></dt>
+						<dt class="name">class <a href="#libjass.renderers.VideoClock">VideoClock</a> implements <a href="#libjass.renderers.Clock">Clock</a></dt>
 						<dd class="description">
 							<p>An implementation of libjass.renderers.Clock that generates play, pause and timeUpdate events according to the state of a &lt;video&gt; element.</p>
 						</dd>
@@ -6097,7 +5531,14 @@ videoClock.addEventListener = value;</code></pre></fieldset></dd>
 								<dd class="description">
 									<p></p>
 								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>videoClock._onTimerTick();</code></pre></fieldset></dd>
+								<dd class="usage"><fieldset><legend /><pre><code>videoClock._onTimerTick(timeStamp);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">timeStamp</dt>
+										<dd class="parameter type">number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
 							</dl>
 							<dl id="libjass.renderers.VideoClock._onVideoPause" class="function private">
 								<dt class="name"><a href="#libjass.renderers.VideoClock._onVideoPause">_onVideoPause</a></dt>
@@ -6144,7 +5585,7 @@ videoClock.addEventListener = value;</code></pre></fieldset></dd>
 						</dd>
 					</dl>
 					<dl id="libjass.renderers.WebRenderer" class="constructor">
-						<dt class="name">class <a href="#libjass.renderers.WebRenderer">WebRenderer</a> extends <a href="#libjass.renderers.NullRenderer">NullRenderer</a></dt>
+						<dt class="name">class <a href="#libjass.renderers.WebRenderer">WebRenderer</a> extends <a href="#libjass.renderers.NullRenderer">NullRenderer</a> implements <a href="#libjass.renderers.EventSource">EventSource.&lt;string&gt;</a></dt>
 						<dd class="description">
 							<p>A renderer implementation that draws subtitles to the given &lt;div&gt;</p>
 						</dd>
@@ -6313,707 +5754,6 @@ div is inserted into the DOM and the animations begin, they are in sync with the
 							</dl>
 						</dd>
 					</dl>
-					<dl id="libjass.renderers.AnimationCollection" class="constructor private">
-						<dt class="name">class <a href="#libjass.renderers.AnimationCollection">AnimationCollection</a></dt>
-						<dd class="description">
-							<p>This class represents a collection of animations. Each animation contains one or more keyframes.
-The collection can then be converted to a CSS3 representation.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var animationCollection = new AnimationCollection(renderer, dialogue);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">renderer</dt>
-								<dd class="parameter type">!libjass.renderers.NullRenderer</dd>
-								<dd class="parameter description">The renderer that this collection is associated with</dd>
-								<dt class="parameter name">dialogue</dt>
-								<dd class="parameter type">!libjass.Dialogue</dd>
-								<dd class="parameter description">The Dialogue that this collection is associated with</dd>
-							</dl>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.renderers.AnimationCollection.animationDelays" class="property">
-								<dt class="name"><a href="#libjass.renderers.AnimationCollection.animationDelays">animationDelays</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p>This array should be used to set the "animation-delay" CSS property of the target element.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = animationCollection.animationDelays;</code></pre></fieldset></dd>
-								<dd class="return type">!Array.&lt;number&gt;</dd>
-							</dl>
-							<dl id="libjass.renderers.AnimationCollection.animationStyle" class="property">
-								<dt class="name"><a href="#libjass.renderers.AnimationCollection.animationStyle">animationStyle</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p>This string should be set as the "animation" CSS property of the target element.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = animationCollection.animationStyle;</code></pre></fieldset></dd>
-								<dd class="return type">string</dd>
-							</dl>
-							<dl id="libjass.renderers.AnimationCollection.cssText" class="property">
-								<dt class="name"><a href="#libjass.renderers.AnimationCollection.cssText">cssText</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p>This string contains the animation definitions and should be inserted into a &lt;style&gt; element.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = animationCollection.cssText;</code></pre></fieldset></dd>
-								<dd class="return type">string</dd>
-							</dl>
-							<dl id="libjass.renderers.AnimationCollection.add" class="function">
-								<dt class="name"><a href="#libjass.renderers.AnimationCollection.add">add</a></dt>
-								<dd class="description">
-									<p>Add an animation to this collection. The given keyframes together make one animation.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>animationCollection.add(timingFunction, keyframes);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">timingFunction</dt>
-										<dd class="parameter type">string</dd>
-										<dd class="parameter description">One of the acceptable values for the "animation-timing-function" CSS property</dd>
-										<dt class="parameter name">keyframes</dt>
-										<dd class="parameter type">Array.&lt;!{time: number, properties: !Object.&lt;string, string&gt;}&gt;</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-						</dd>
-					</dl>
-					<dl id="libjass.renderers.DrawingStyles" class="constructor private">
-						<dt class="name">class <a href="#libjass.renderers.DrawingStyles">DrawingStyles</a></dt>
-						<dd class="description">
-							<p>This class represents an ASS drawing - a set of drawing instructions between {\p} tags.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var drawingStyles = new DrawingStyles(outputScaleX, outputScaleY);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">outputScaleX</dt>
-								<dd class="parameter type">number</dd>
-								<dd class="parameter description"></dd>
-								<dt class="parameter name">outputScaleY</dt>
-								<dd class="parameter type">number</dd>
-								<dd class="parameter description"></dd>
-							</dl>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.renderers.DrawingStyles.baselineOffset" class="property">
-								<dt class="name"><a href="#libjass.renderers.DrawingStyles.baselineOffset">baselineOffset</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>drawingStyles.baselineOffset = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.DrawingStyles.scale" class="property">
-								<dt class="name"><a href="#libjass.renderers.DrawingStyles.scale">scale</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>drawingStyles.scale = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.DrawingStyles.toSVG" class="function">
-								<dt class="name"><a href="#libjass.renderers.DrawingStyles.toSVG">toSVG</a></dt>
-								<dd class="description">
-									<p>Converts this drawing to an &lt;svg&gt; element.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = drawingStyles.toSVG(drawingInstructions, fillColor);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">drawingInstructions</dt>
-										<dd class="parameter type">!libjass.parts.DrawingInstructions</dd>
-										<dd class="parameter description"></dd>
-										<dt class="parameter name">fillColor</dt>
-										<dd class="parameter type">!libjass.parts.Color</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">!SVGSVGElement</dd>
-								<dd class="return description"></dd>
-							</dl>
-						</dd>
-					</dl>
-					<dl id="libjass.renderers.Keyframe" class="constructor private">
-						<dt class="name">class <a href="#libjass.renderers.Keyframe">Keyframe</a></dt>
-						<dd class="description">
-							<p>This class represents a single keyframe. It has a list of CSS properties (names and values) associated with a point in time. Multiple keyframes make up an animation.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var keyframe = new Keyframe(time, properties);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">time</dt>
-								<dd class="parameter type">number</dd>
-								<dd class="parameter description"></dd>
-								<dt class="parameter name">properties</dt>
-								<dd class="parameter type">!Object.&lt;string, string&gt;</dd>
-								<dd class="parameter description"></dd>
-							</dl>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.renderers.Keyframe.properties" class="property">
-								<dt class="name"><a href="#libjass.renderers.Keyframe.properties">properties</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = keyframe.properties;</code></pre></fieldset></dd>
-								<dd class="return type">!Object.&lt;string, string&gt;</dd>
-							</dl>
-							<dl id="libjass.renderers.Keyframe.time" class="property">
-								<dt class="name"><a href="#libjass.renderers.Keyframe.time">time</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = keyframe.time;</code></pre></fieldset></dd>
-								<dd class="return type">number</dd>
-							</dl>
-						</dd>
-					</dl>
-					<dl id="libjass.renderers.SpanStyles" class="constructor private">
-						<dt class="name">class <a href="#libjass.renderers.SpanStyles">SpanStyles</a></dt>
-						<dd class="description">
-							<p>This class represents the style attribute of a span.
-As a Dialogue's div is rendered, individual parts are added to span's, and this class is used to maintain the style attribute of those.</p>
-						</dd>
-						<dd class="usage"><fieldset><legend /><pre><code>var spanStyles = new SpanStyles(renderer, dialogue, scaleX, scaleY, settings, fontSizeElement, svgDefsElement);</code></pre></fieldset></dd>
-						<dd class="parameters">
-							<dl>
-								<dt class="parameter name">renderer</dt>
-								<dd class="parameter type">!libjass.renderers.NullRenderer</dd>
-								<dd class="parameter description">The renderer that this set of styles is associated with</dd>
-								<dt class="parameter name">dialogue</dt>
-								<dd class="parameter type">!libjass.Dialogue</dd>
-								<dd class="parameter description">The Dialogue that this set of styles is associated with</dd>
-								<dt class="parameter name">scaleX</dt>
-								<dd class="parameter type">number</dd>
-								<dd class="parameter description">The horizontal scaling of the subtitles</dd>
-								<dt class="parameter name">scaleY</dt>
-								<dd class="parameter type">number</dd>
-								<dd class="parameter description">The vertical scaling of the subtitles</dd>
-								<dt class="parameter name">settings</dt>
-								<dd class="parameter type">!libjass.renderers.RendererSettings</dd>
-								<dd class="parameter description">The renderer settings</dd>
-								<dt class="parameter name">fontSizeElement</dt>
-								<dd class="parameter type">!HTMLDivElement</dd>
-								<dd class="parameter description">A &lt;div&gt; element to measure font sizes with</dd>
-								<dt class="parameter name">svgDefsElement</dt>
-								<dd class="parameter type">!SVGDefsElement</dd>
-								<dd class="parameter description">An SVG &lt;defs&gt; element to append filter definitions to</dd>
-							</dl>
-						</dd>
-						<dd class="members">
-							<dl id="libjass.renderers.SpanStyles.blur" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.blur">blur</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the blur property. null defaults it to 0.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.blur = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.bold" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.bold">bold</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the bold property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.bold = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">(?number|?boolean)</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.fontName" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.fontName">fontName</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the font name property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontName = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?string</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.fontScaleX" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.fontScaleX">fontScaleX</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the horizontal font scaling property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontScaleX = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.fontScaleY" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.fontScaleY">fontScaleY</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the vertical font scaling property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontScaleY = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.fontSize" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.fontSize">fontSize</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the font size property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontSize = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.gaussianBlur" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.gaussianBlur">gaussianBlur</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the Gaussian blur property. null defaults it to 0.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.gaussianBlur = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.italic" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.italic">italic</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the italic property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.italic = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?boolean</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.letterSpacing" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.letterSpacing">letterSpacing</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the letter spacing property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.letterSpacing = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.outlineAlpha" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.outlineAlpha">outlineAlpha</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the outline alpha property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineAlpha = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.outlineColor" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.outlineColor">outlineColor</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the outline color property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineColor = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">libjass.parts.Color</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.outlineHeight" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.outlineHeight">outlineHeight</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the outline height property. null defaults it to the style's original outline height value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineHeight = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.outlineWidth" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.outlineWidth">outlineWidth</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the outline width property. null defaults it to the style's original outline width value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineWidth = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.primaryAlpha" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.primaryAlpha">primaryAlpha</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p>Gets the primary alpha property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.primaryAlpha;</code></pre></fieldset></dd>
-								<dd class="return type">?number</dd>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the primary alpha property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.primaryAlpha = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.primaryColor" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.primaryColor">primaryColor</a></dt>
-								<dt class="getter">Getter</dt>
-								<dd class="description">
-									<p>Gets the primary color property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.primaryColor;</code></pre></fieldset></dd>
-								<dd class="return type">!libjass.parts.Color</dd>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the primary color property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.primaryColor = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">libjass.parts.Color</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.rotationX" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.rotationX">rotationX</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the X-axis rotation property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.rotationX = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.rotationY" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.rotationY">rotationY</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the Y-axis rotation property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.rotationY = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.rotationZ" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.rotationZ">rotationZ</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the Z-axis rotation property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.rotationZ = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.secondaryAlpha" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.secondaryAlpha">secondaryAlpha</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the secondary alpha property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.secondaryAlpha = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.secondaryColor" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.secondaryColor">secondaryColor</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the secondary color property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.secondaryColor = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">libjass.parts.Color</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.shadowAlpha" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.shadowAlpha">shadowAlpha</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the shadow alpha property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowAlpha = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.shadowColor" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.shadowColor">shadowColor</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the shadow color property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowColor = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">libjass.parts.Color</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.shadowDepthX" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.shadowDepthX">shadowDepthX</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the outline width property. null defaults it to the style's original shadow depth X value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowDepthX = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.shadowDepthY" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.shadowDepthY">shadowDepthY</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the shadow height property. null defaults it to the style's original shadow depth Y value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowDepthY = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.skewX" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.skewX">skewX</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the X-axis skew property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.skewX = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.skewY" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.skewY">skewY</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the Y-axis skew property.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.skewY = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?number</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.strikeThrough" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.strikeThrough">strikeThrough</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the strike-through property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.strikeThrough = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?boolean</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.underline" class="property">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.underline">underline</a></dt>
-								<dt class="setter">Setter</dt>
-								<dd class="description">
-									<p>Sets the underline property. null defaults it to the default style's value.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.underline = value;</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">value</dt>
-										<dd class="parameter type">?boolean</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.makeNewLine" class="function">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.makeNewLine">makeNewLine</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.makeNewLine();</code></pre></fieldset></dd>
-								<dt>Returns</dt>
-								<dd class="return type">!HTMLBRElement</dd>
-								<dd class="return description"></dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.reset" class="function">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.reset">reset</a></dt>
-								<dd class="description">
-									<p>Resets the styles to the defaults provided by the argument.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.reset(newStyle);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">newStyle</dt>
-										<dd class="parameter type">libjass.Style</dd>
-										<dd class="parameter description">The new defaults to reset the style to. If null, the styles are reset to the default style of the Dialogue.</dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles.setStylesOnSpan" class="function">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles.setStylesOnSpan">setStylesOnSpan</a></dt>
-								<dd class="description">
-									<p>Sets the style attribute on the given span element.</p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.setStylesOnSpan(span);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">span</dt>
-										<dd class="parameter type">!HTMLSpanElement</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">!HTMLSpanElement</dd>
-								<dd class="return description">The resulting &lt;span&gt; with the CSS styles applied. This may be a wrapper around the input &lt;span&gt; if the styles were applied using SVG filters.</dd>
-							</dl>
-							<dl id="libjass.renderers.SpanStyles._getFontSize" class="function private static">
-								<dt class="name"><a href="#libjass.renderers.SpanStyles._getFontSize">_getFontSize</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>var result = SpanStyles._getFontSize(fontFamily, lineHeight, fontSizeElement);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">fontFamily</dt>
-										<dd class="parameter type">string</dd>
-										<dd class="parameter description"></dd>
-										<dt class="parameter name">lineHeight</dt>
-										<dd class="parameter type">number</dd>
-										<dd class="parameter description"></dd>
-										<dt class="parameter name">fontSizeElement</dt>
-										<dd class="parameter type">!HTMLDivElement</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-								<dt>Returns</dt>
-								<dd class="return type">number</dd>
-								<dd class="return description"></dd>
-							</dl>
-						</dd>
-					</dl>
 				</section>
 
 				<section>
@@ -7056,31 +5796,39 @@ As a Dialogue's div is rendered, individual parts are added to span's, and this 
 							</dl>
 						</dd>
 					</dl>
-					<dl id="libjass.renderers.VideoState" class="enum private">
-						<dt class="name">enum <a href="#libjass.renderers.VideoState">VideoState</a></dt>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="libjass.settings">Namespace libjass.settings</h1>
+
+				<section>
+					<h2>Variables</h2>
+					<dl id="libjass.settings.debugMode" class="variable">
+						<dt class="name"><a href="#libjass.settings.debugMode">debugMode</a></dt>
 						<dd class="description">
-							<p>The state of the video.</p>
+							<p>Debug mode. When true, libjass logs some debug messages.
+Also available as libjass.debugMode for backward-compatibility.</p>
 						</dd>
-						<dd class="members">
-							<dl id="libjass.renderers.VideoState.Playing" class="member">
-								<dt class="name"><a href="#libjass.renderers.VideoState.Playing">Playing</a> = 0</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-							</dl>
-							<dl id="libjass.renderers.VideoState.Paused" class="member">
-								<dt class="name"><a href="#libjass.renderers.VideoState.Paused">Paused</a> = 1</dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-							</dl>
+						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.settings.debugMode;
+libjass.settings.debugMode = value;</code></pre></fieldset></dd>
+						<dd class="return type">boolean</dd>
+					</dl>
+					<dl id="libjass.settings.verboseMode" class="variable">
+						<dt class="name"><a href="#libjass.settings.verboseMode">verboseMode</a></dt>
+						<dd class="description">
+							<p>Verbose debug mode. When true, libjass logs some more debug messages. This setting is independent of <a href="#libjass.settings.debugMode">libjass.settings.debugMode</a>
+Also available as libjass.verboseMode for backward-compatibility.</p>
 						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var result = libjass.settings.verboseMode;
+libjass.settings.verboseMode = value;</code></pre></fieldset></dd>
+						<dd class="return type">boolean</dd>
 					</dl>
 				</section>
 
 			</section>
 			<section>
-				<h1 id="libjass.webworker">libjass.webworker</h1>
+				<h1 id="libjass.webworker">Namespace libjass.webworker</h1>
 
 				<section>
 					<h2>Free functions</h2>
@@ -7196,26 +5944,6 @@ the path will be determined from the src attribute of the &lt;script&gt; element
 								<dd class="parameters">
 									<dl>
 										<dt class="parameter name">type</dt>
-										<dd class="parameter type">"message"</dd>
-										<dd class="parameter description"></dd>
-										<dt class="parameter name">listener</dt>
-										<dd class="parameter type">function(!MessageEvent): *</dd>
-										<dd class="parameter description"></dd>
-										<dt class="parameter name">useCapture</dt>
-										<dd class="parameter type">?boolean</dd>
-										<dd class="parameter description"></dd>
-									</dl>
-								</dd>
-							</dl>
-							<dl id="libjass.webworker.WorkerCommunication.addEventListener" class="function">
-								<dt class="name"><a href="#libjass.webworker.WorkerCommunication.addEventListener">addEventListener</a></dt>
-								<dd class="description">
-									<p></p>
-								</dd>
-								<dd class="usage"><fieldset><legend /><pre><code>workerCommunication.addEventListener(type, listener, useCapture);</code></pre></fieldset></dd>
-								<dd class="parameters">
-									<dl>
-										<dt class="parameter name">type</dt>
 										<dd class="parameter type">string</dd>
 										<dd class="parameter description"></dd>
 										<dt class="parameter name">listener</dt>
@@ -7318,7 +6046,7 @@ workerResponseMessage.result = value;</code></pre></fieldset></dd>
 				<section>
 					<h2>Classes</h2>
 					<dl id="libjass.webworker.WorkerChannelImpl" class="constructor private">
-						<dt class="name">class <a href="#libjass.webworker.WorkerChannelImpl">WorkerChannelImpl</a></dt>
+						<dt class="name">class <a href="#libjass.webworker.WorkerChannelImpl">WorkerChannelImpl</a> implements <a href="#libjass.webworker.WorkerChannel">WorkerChannel</a></dt>
 						<dd class="description">
 							<p>Internal implementation of libjass.webworker.WorkerChannel</p>
 						</dd>
@@ -7450,6 +6178,1486 @@ workerResponseMessage.result = value;</code></pre></fieldset></dd>
 								<dd class="description">
 									<p></p>
 								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./renderers/clocks">Module ./renderers/clocks</h1>
+
+				<section>
+					<h2>Enums</h2>
+					<dl id="./renderers/clocks.VideoState" class="enum private">
+						<dt class="name">enum <a href="#./renderers/clocks.VideoState">VideoState</a></dt>
+						<dd class="description">
+							<p>The state of the video.</p>
+						</dd>
+						<dd class="members">
+							<dl id="./renderers/clocks.VideoState.Playing" class="member">
+								<dt class="name"><a href="#./renderers/clocks.VideoState.Playing">Playing</a> = 0</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+							</dl>
+							<dl id="./renderers/clocks.VideoState.Paused" class="member">
+								<dt class="name"><a href="#./renderers/clocks.VideoState.Paused">Paused</a> = 1</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./renderers/web/animation-collection">Module ./renderers/web/animation-collection</h1>
+
+				<section>
+					<h2>Classes</h2>
+					<dl id="./renderers/web/animation-collection.AnimationCollection" class="constructor">
+						<dt class="name">class <a href="#./renderers/web/animation-collection.AnimationCollection">AnimationCollection</a></dt>
+						<dd class="description">
+							<p>This class represents a collection of animations. Each animation contains one or more keyframes.
+The collection can then be converted to a CSS3 representation.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var animationCollection = new AnimationCollection(renderer);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">renderer</dt>
+								<dd class="parameter type">!libjass.renderers.NullRenderer</dd>
+								<dd class="parameter description">The renderer that this collection is associated with</dd>
+							</dl>
+						</dd>
+						<dd class="members">
+							<dl id="./renderers/web/animation-collection.AnimationCollection.animationDelays" class="property">
+								<dt class="name"><a href="#./renderers/web/animation-collection.AnimationCollection.animationDelays">animationDelays</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p>This array should be used to set the "animation-delay" CSS property of the target element.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = animationCollection.animationDelays;</code></pre></fieldset></dd>
+								<dd class="return type">!Array.&lt;number&gt;</dd>
+							</dl>
+							<dl id="./renderers/web/animation-collection.AnimationCollection.animationStyle" class="property">
+								<dt class="name"><a href="#./renderers/web/animation-collection.AnimationCollection.animationStyle">animationStyle</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p>This string should be set as the "animation" CSS property of the target element.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = animationCollection.animationStyle;</code></pre></fieldset></dd>
+								<dd class="return type">string</dd>
+							</dl>
+							<dl id="./renderers/web/animation-collection.AnimationCollection.cssText" class="property">
+								<dt class="name"><a href="#./renderers/web/animation-collection.AnimationCollection.cssText">cssText</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p>This string contains the animation definitions and should be inserted into a &lt;style&gt; element.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = animationCollection.cssText;</code></pre></fieldset></dd>
+								<dd class="return type">string</dd>
+							</dl>
+							<dl id="./renderers/web/animation-collection.AnimationCollection.add" class="function">
+								<dt class="name"><a href="#./renderers/web/animation-collection.AnimationCollection.add">add</a></dt>
+								<dd class="description">
+									<p>Add an animation to this collection. The given keyframes together make one animation.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>animationCollection.add(timingFunction, keyframes);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">timingFunction</dt>
+										<dd class="parameter type">string</dd>
+										<dd class="parameter description">One of the acceptable values for the "animation-timing-function" CSS property</dd>
+										<dt class="parameter name">keyframes</dt>
+										<dd class="parameter type">!Array.&lt;!libjass.renderers.Keyframe&gt;</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./renderers/web/dom-parser">Module ./renderers/web/dom-parser</h1>
+
+				<section>
+					<h2>Variables</h2>
+					<dl id="./renderers/web/dom-parser.domParser" class="variable">
+						<dt class="name"><a href="#./renderers/web/dom-parser.domParser">domParser</a></dt>
+						<dd class="description">
+							<p></p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var result = domParser;
+domParser = value;</code></pre></fieldset></dd>
+						<dd class="return type">!DomParser</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./renderers/web/drawing-styles">Module ./renderers/web/drawing-styles</h1>
+
+				<section>
+					<h2>Classes</h2>
+					<dl id="./renderers/web/drawing-styles.DrawingStyles" class="constructor">
+						<dt class="name">class <a href="#./renderers/web/drawing-styles.DrawingStyles">DrawingStyles</a></dt>
+						<dd class="description">
+							<p>This class represents an ASS drawing - a set of drawing instructions between {\p} tags.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var drawingStyles = new DrawingStyles(outputScaleX, outputScaleY);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">outputScaleX</dt>
+								<dd class="parameter type">number</dd>
+								<dd class="parameter description"></dd>
+								<dt class="parameter name">outputScaleY</dt>
+								<dd class="parameter type">number</dd>
+								<dd class="parameter description"></dd>
+							</dl>
+						</dd>
+						<dd class="members">
+							<dl id="./renderers/web/drawing-styles.DrawingStyles.baselineOffset" class="property">
+								<dt class="name"><a href="#./renderers/web/drawing-styles.DrawingStyles.baselineOffset">baselineOffset</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>drawingStyles.baselineOffset = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/drawing-styles.DrawingStyles.scale" class="property">
+								<dt class="name"><a href="#./renderers/web/drawing-styles.DrawingStyles.scale">scale</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>drawingStyles.scale = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/drawing-styles.DrawingStyles.toSVG" class="function">
+								<dt class="name"><a href="#./renderers/web/drawing-styles.DrawingStyles.toSVG">toSVG</a></dt>
+								<dd class="description">
+									<p>Converts this drawing to an &lt;svg&gt; element.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = drawingStyles.toSVG(drawingInstructions, fillColor);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">drawingInstructions</dt>
+										<dd class="parameter type">!libjass.parts.DrawingInstructions</dd>
+										<dd class="parameter description"></dd>
+										<dt class="parameter name">fillColor</dt>
+										<dd class="parameter type">!libjass.parts.Color</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">!SVGSVGElement</dd>
+								<dd class="return description"></dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./renderers/web/keyframe">Module ./renderers/web/keyframe</h1>
+
+				<section>
+					<h2>Classes</h2>
+					<dl id="./renderers/web/keyframe.Keyframe" class="constructor">
+						<dt class="name">class <a href="#./renderers/web/keyframe.Keyframe">Keyframe</a></dt>
+						<dd class="description">
+							<p>This class represents a single keyframe. It has a list of CSS properties (names and values) associated with a point in time. Multiple keyframes make up an animation.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var keyframe = new Keyframe(time, properties);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">time</dt>
+								<dd class="parameter type">number</dd>
+								<dd class="parameter description"></dd>
+								<dt class="parameter name">properties</dt>
+								<dd class="parameter type">!Map.&lt;string, string&gt;</dd>
+								<dd class="parameter description"></dd>
+							</dl>
+						</dd>
+						<dd class="members">
+							<dl id="./renderers/web/keyframe.Keyframe.properties" class="property">
+								<dt class="name"><a href="#./renderers/web/keyframe.Keyframe.properties">properties</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = keyframe.properties;</code></pre></fieldset></dd>
+								<dd class="return type">!Map.&lt;string, string&gt;</dd>
+							</dl>
+							<dl id="./renderers/web/keyframe.Keyframe.time" class="property">
+								<dt class="name"><a href="#./renderers/web/keyframe.Keyframe.time">time</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = keyframe.time;</code></pre></fieldset></dd>
+								<dd class="return type">number</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./renderers/web/renderer">Module ./renderers/web/renderer</h1>
+
+				<section>
+					<h2>Interfaces</h2>
+					<dl id="./renderers/web/renderer.PreRenderedSub" class="interface private">
+						<dt class="name">interface <a href="#./renderers/web/renderer.PreRenderedSub">PreRenderedSub</a></dt>
+						<dd class="description">
+							<p></p>
+						</dd>
+						<dd class="members">
+							<dl id="./renderers/web/renderer.PreRenderedSub.animationDelays" class="variable">
+								<dt class="name"><a href="#./renderers/web/renderer.PreRenderedSub.animationDelays">animationDelays</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = preRenderedSub.animationDelays;
+preRenderedSub.animationDelays = value;</code></pre></fieldset></dd>
+								<dd class="return type">!Map.&lt;string, number&gt;</dd>
+							</dl>
+							<dl id="./renderers/web/renderer.PreRenderedSub.sub" class="variable">
+								<dt class="name"><a href="#./renderers/web/renderer.PreRenderedSub.sub">sub</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = preRenderedSub.sub;
+preRenderedSub.sub = value;</code></pre></fieldset></dd>
+								<dd class="return type">!HTMLDivElement</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./renderers/web/span-styles">Module ./renderers/web/span-styles</h1>
+
+				<section>
+					<h2>Classes</h2>
+					<dl id="./renderers/web/span-styles.SpanStyles" class="constructor">
+						<dt class="name">class <a href="#./renderers/web/span-styles.SpanStyles">SpanStyles</a></dt>
+						<dd class="description">
+							<p>This class represents the style attribute of a span.
+As a Dialogue's div is rendered, individual parts are added to span's, and this class is used to maintain the style attribute of those.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var spanStyles = new SpanStyles(renderer, dialogue, scaleX, scaleY, settings, fontSizeElement, svgDefsElement);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">renderer</dt>
+								<dd class="parameter type">!libjass.renderers.NullRenderer</dd>
+								<dd class="parameter description">The renderer that this set of styles is associated with</dd>
+								<dt class="parameter name">dialogue</dt>
+								<dd class="parameter type">!libjass.Dialogue</dd>
+								<dd class="parameter description">The Dialogue that this set of styles is associated with</dd>
+								<dt class="parameter name">scaleX</dt>
+								<dd class="parameter type">number</dd>
+								<dd class="parameter description">The horizontal scaling of the subtitles</dd>
+								<dt class="parameter name">scaleY</dt>
+								<dd class="parameter type">number</dd>
+								<dd class="parameter description">The vertical scaling of the subtitles</dd>
+								<dt class="parameter name">settings</dt>
+								<dd class="parameter type">!libjass.renderers.RendererSettings</dd>
+								<dd class="parameter description">The renderer settings</dd>
+								<dt class="parameter name">fontSizeElement</dt>
+								<dd class="parameter type">!HTMLDivElement</dd>
+								<dd class="parameter description">A &lt;div&gt; element to measure font sizes with</dd>
+								<dt class="parameter name">svgDefsElement</dt>
+								<dd class="parameter type">!SVGDefsElement</dd>
+								<dd class="parameter description">An SVG &lt;defs&gt; element to append filter definitions to</dd>
+							</dl>
+						</dd>
+						<dd class="members">
+							<dl id="./renderers/web/span-styles.SpanStyles.blur" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.blur">blur</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the blur property. null defaults it to 0.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.blur = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.bold" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.bold">bold</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the bold property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.bold = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">(?number|?boolean)</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.fontName" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.fontName">fontName</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the font name property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontName = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?string</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.fontScaleX" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.fontScaleX">fontScaleX</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the horizontal font scaling property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontScaleX = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.fontScaleY" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.fontScaleY">fontScaleY</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the vertical font scaling property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontScaleY = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.fontSize" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.fontSize">fontSize</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the font size property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.fontSize = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.gaussianBlur" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.gaussianBlur">gaussianBlur</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the Gaussian blur property. null defaults it to 0.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.gaussianBlur = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.italic" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.italic">italic</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the italic property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.italic = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?boolean</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.letterSpacing" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.letterSpacing">letterSpacing</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the letter spacing property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.letterSpacing = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.outlineAlpha" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.outlineAlpha">outlineAlpha</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the outline alpha property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineAlpha = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.outlineColor" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.outlineColor">outlineColor</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the outline color property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineColor = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">libjass.Color</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.outlineHeight" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.outlineHeight">outlineHeight</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the outline height property. null defaults it to the style's original outline height value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineHeight = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.outlineWidth" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.outlineWidth">outlineWidth</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the outline width property. null defaults it to the style's original outline width value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.outlineWidth = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.primaryAlpha" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.primaryAlpha">primaryAlpha</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p>Gets the primary alpha property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.primaryAlpha;</code></pre></fieldset></dd>
+								<dd class="return type">?number</dd>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the primary alpha property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.primaryAlpha = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.primaryColor" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.primaryColor">primaryColor</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p>Gets the primary color property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.primaryColor;</code></pre></fieldset></dd>
+								<dd class="return type">!libjass.Color</dd>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the primary color property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.primaryColor = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">libjass.Color</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.rotationX" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.rotationX">rotationX</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the X-axis rotation property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.rotationX = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.rotationY" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.rotationY">rotationY</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the Y-axis rotation property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.rotationY = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.rotationZ" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.rotationZ">rotationZ</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the Z-axis rotation property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.rotationZ = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.secondaryAlpha" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.secondaryAlpha">secondaryAlpha</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p>Gets the secondary alpha property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.secondaryAlpha;</code></pre></fieldset></dd>
+								<dd class="return type">?number</dd>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the secondary alpha property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.secondaryAlpha = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.secondaryColor" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.secondaryColor">secondaryColor</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p>Gets the secondary color property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.secondaryColor;</code></pre></fieldset></dd>
+								<dd class="return type">!libjass.Color</dd>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the secondary color property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.secondaryColor = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">libjass.Color</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.shadowAlpha" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.shadowAlpha">shadowAlpha</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the shadow alpha property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowAlpha = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.shadowColor" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.shadowColor">shadowColor</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the shadow color property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowColor = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">libjass.Color</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.shadowDepthX" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.shadowDepthX">shadowDepthX</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the outline width property. null defaults it to the style's original shadow depth X value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowDepthX = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.shadowDepthY" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.shadowDepthY">shadowDepthY</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the shadow height property. null defaults it to the style's original shadow depth Y value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.shadowDepthY = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.skewX" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.skewX">skewX</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the X-axis skew property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.skewX = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.skewY" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.skewY">skewY</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the Y-axis skew property.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.skewY = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?number</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.strikeThrough" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.strikeThrough">strikeThrough</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the strike-through property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.strikeThrough = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?boolean</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.underline" class="property">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.underline">underline</a></dt>
+								<dt class="setter">Setter</dt>
+								<dd class="description">
+									<p>Sets the underline property. null defaults it to the default style's value.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.underline = value;</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">?boolean</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.makeNewLine" class="function">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.makeNewLine">makeNewLine</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.makeNewLine();</code></pre></fieldset></dd>
+								<dt>Returns</dt>
+								<dd class="return type">!HTMLBRElement</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.reset" class="function">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.reset">reset</a></dt>
+								<dd class="description">
+									<p>Resets the styles to the defaults provided by the argument.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>spanStyles.reset(newStyle);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">newStyle</dt>
+										<dd class="parameter type">libjass.Style</dd>
+										<dd class="parameter description">The new defaults to reset the style to. If null, the styles are reset to the default style of the Dialogue.</dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles.setStylesOnSpan" class="function">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles.setStylesOnSpan">setStylesOnSpan</a></dt>
+								<dd class="description">
+									<p>Sets the style attribute on the given span element.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = spanStyles.setStylesOnSpan(span, animationCollection, animationStyleElement);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">span</dt>
+										<dd class="parameter type">!HTMLSpanElement</dd>
+										<dd class="parameter description"></dd>
+										<dt class="parameter name">animationCollection</dt>
+										<dd class="parameter type">!AnimationCollection</dd>
+										<dd class="parameter description"></dd>
+										<dt class="parameter name">animationStyleElement</dt>
+										<dd class="parameter type">!HTMLStyleElement</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">!HTMLSpanElement</dd>
+								<dd class="return description">The resulting &lt;span&gt; with the CSS styles applied. This may be a wrapper around the input &lt;span&gt; if the styles were applied using SVG filters.</dd>
+							</dl>
+							<dl id="./renderers/web/span-styles.SpanStyles._getFontSize" class="function private static">
+								<dt class="name"><a href="#./renderers/web/span-styles.SpanStyles._getFontSize">_getFontSize</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = SpanStyles._getFontSize(fontFamily, lineHeight, fontSizeElement);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">fontFamily</dt>
+										<dd class="parameter type">string</dd>
+										<dd class="parameter description"></dd>
+										<dt class="parameter name">lineHeight</dt>
+										<dd class="parameter type">number</dd>
+										<dd class="parameter description"></dd>
+										<dt class="parameter name">fontSizeElement</dt>
+										<dd class="parameter type">!HTMLDivElement</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">number</dd>
+								<dd class="return description"></dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./types/misc">Module ./types/misc</h1>
+
+				<section>
+					<h2>Free functions</h2>
+					<dl id="./types/misc.valueOrDefault" class="function">
+						<dt class="name"><a href="#./types/misc.valueOrDefault">valueOrDefault.&lt;T&gt;</a></dt>
+						<dd class="description">
+							<p></p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var result = valueOrDefault(template, key, converter, validator, defaultValue);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">template</dt>
+								<dd class="parameter type">!Map.&lt;string, string&gt;</dd>
+								<dd class="parameter description"></dd>
+								<dt class="parameter name">key</dt>
+								<dd class="parameter type">string</dd>
+								<dd class="parameter description"></dd>
+								<dt class="parameter name">converter</dt>
+								<dd class="parameter type">function(string):T</dd>
+								<dd class="parameter description"></dd>
+								<dt class="parameter name">validator</dt>
+								<dd class="parameter type">?function(T):boolean</dd>
+								<dd class="parameter description"></dd>
+								<dt class="parameter name">defaultValue</dt>
+								<dd class="parameter type">T</dd>
+								<dd class="parameter description"></dd>
+							</dl>
+						</dd>
+						<dt>Returns</dt>
+						<dd class="return type">T</dd>
+						<dd class="return description"></dd>
+					</dl>
+				</section>
+
+				<section>
+					<h2>Interfaces</h2>
+					<dl id="./types/misc.Property" class="interface">
+						<dt class="name">interface <a href="#./types/misc.Property">Property</a></dt>
+						<dd class="description">
+							<p>A property.</p>
+						</dd>
+						<dd class="members">
+							<dl id="./types/misc.Property.name" class="variable">
+								<dt class="name"><a href="#./types/misc.Property.name">name</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = property.name;
+property.name = value;</code></pre></fieldset></dd>
+								<dd class="return type">string</dd>
+							</dl>
+							<dl id="./types/misc.Property.value" class="variable">
+								<dt class="name"><a href="#./types/misc.Property.value">value</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = property.value;
+property.value = value;</code></pre></fieldset></dd>
+								<dd class="return type">string</dd>
+							</dl>
+						</dd>
+					</dl>
+					<dl id="./types/misc.TypedTemplate" class="interface">
+						<dt class="name">interface <a href="#./types/misc.TypedTemplate">TypedTemplate</a></dt>
+						<dd class="description">
+							<p>A template object with a particular type.</p>
+						</dd>
+						<dd class="members">
+							<dl id="./types/misc.TypedTemplate.template" class="variable">
+								<dt class="name"><a href="#./types/misc.TypedTemplate.template">template</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = typedTemplate.template;
+typedTemplate.template = value;</code></pre></fieldset></dd>
+								<dd class="return type">!Map.&lt;string, string&gt;</dd>
+							</dl>
+							<dl id="./types/misc.TypedTemplate.type" class="variable">
+								<dt class="name"><a href="#./types/misc.TypedTemplate.type">type</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = typedTemplate.type;
+typedTemplate.type = value;</code></pre></fieldset></dd>
+								<dd class="return type">string</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./utility/map">Module ./utility/map</h1>
+
+				<section>
+					<h2>Variables</h2>
+					<dl id="./utility/map.Map" class="variable">
+						<dt class="name"><a href="#./utility/map.Map">Map</a></dt>
+						<dd class="description">
+							<p>Set to browser's implementation of Map if it has one, else set to <a href="#./utility/map.SimpleMap">./utility/map.SimpleMap</a></p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var result = Map;
+Map = value;</code></pre></fieldset></dd>
+						<dd class="return type">function(new:Map, !Array.&lt;!Array.&lt;*&gt;&gt;=)</dd>
+					</dl>
+				</section>
+
+				<section>
+					<h2>Classes</h2>
+					<dl id="./utility/map.SimpleMap" class="constructor private">
+						<dt class="name">class <a href="#./utility/map.SimpleMap">SimpleMap.&lt;K, V&gt;</a></dt>
+						<dd class="description">
+							<p>Map implementation for browsers that don't support it. Only supports keys which are of Number or String type, or which have a property called "id".
+Keys and values are stored as properties of an object, with property names derived from the key type.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var simpleMap = new SimpleMap(iterable);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">iterable</dt>
+								<dd class="parameter type">!Array.&lt;!Array.&lt;*&gt;&gt;=</dd>
+								<dd class="parameter description">Only an array of elements (where each element is a 2-tuple of key and value) is supported.</dd>
+							</dl>
+						</dd>
+						<dd class="members">
+							<dl id="./utility/map.SimpleMap.size" class="property">
+								<dt class="name"><a href="#./utility/map.SimpleMap.size">size</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.size;</code></pre></fieldset></dd>
+								<dd class="return type">number</dd>
+							</dl>
+							<dl id="./utility/map.SimpleMap.clear" class="function">
+								<dt class="name"><a href="#./utility/map.SimpleMap.clear">clear</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simpleMap.clear();</code></pre></fieldset></dd>
+							</dl>
+							<dl id="./utility/map.SimpleMap.delete" class="function">
+								<dt class="name"><a href="#./utility/map.SimpleMap.delete">delete</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.delete(key);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">key</dt>
+										<dd class="parameter type">K</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">boolean</dd>
+								<dd class="return description">true if the key was present before being deleted, false otherwise</dd>
+							</dl>
+							<dl id="./utility/map.SimpleMap.forEach" class="function">
+								<dt class="name"><a href="#./utility/map.SimpleMap.forEach">forEach</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simpleMap.forEach(callbackfn, thisArg);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">callbackfn</dt>
+										<dd class="parameter type">function(V, K, libjass.Map.&lt;K, V&gt;)</dd>
+										<dd class="parameter description">A function that is called with each key and value in the map.</dd>
+										<dt class="parameter name">thisArg</dt>
+										<dd class="parameter type">*</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./utility/map.SimpleMap.get" class="function">
+								<dt class="name"><a href="#./utility/map.SimpleMap.get">get</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.get(key);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">key</dt>
+										<dd class="parameter type">K</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">V</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/map.SimpleMap.has" class="function">
+								<dt class="name"><a href="#./utility/map.SimpleMap.has">has</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.has(key);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">key</dt>
+										<dd class="parameter type">K</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">boolean</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/map.SimpleMap.set" class="function">
+								<dt class="name"><a href="#./utility/map.SimpleMap.set">set</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap.set(key, value);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">key</dt>
+										<dd class="parameter type">K</dd>
+										<dd class="parameter description"></dd>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">V</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">libjass.Map.&lt;K, V&gt;</dd>
+								<dd class="return description">This map</dd>
+							</dl>
+							<dl id="./utility/map.SimpleMap._keyToProperty" class="function private">
+								<dt class="name"><a href="#./utility/map.SimpleMap._keyToProperty">_keyToProperty</a></dt>
+								<dd class="description">
+									<p>Converts the given key into a property name for the internal map.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleMap._keyToProperty(key);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">key</dt>
+										<dd class="parameter type">K</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">string</dd>
+								<dd class="return description"></dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./utility/mixin">Module ./utility/mixin</h1>
+
+				<section>
+					<h2>Free functions</h2>
+					<dl id="./utility/mixin.mixin" class="function">
+						<dt class="name"><a href="#./utility/mixin.mixin">mixin</a></dt>
+						<dd class="description">
+							<p>Adds properties of the given mixins' prototypes to the given class's prototype.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>mixin(clazz, mixins);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">clazz</dt>
+								<dd class="parameter type">!*</dd>
+								<dd class="parameter description"></dd>
+								<dt class="parameter name">mixins</dt>
+								<dd class="parameter type">!Array.&lt;*&gt;</dd>
+								<dd class="parameter description"></dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./utility/promise">Module ./utility/promise</h1>
+
+				<section>
+					<h2>Variables</h2>
+					<dl id="./utility/promise.Promise" class="variable">
+						<dt class="name"><a href="#./utility/promise.Promise">Promise</a></dt>
+						<dd class="description">
+							<p>Set to browser's implementation of Promise if it has one, else set to <a href="#./utility/promise.SimplePromise">./utility/promise.SimplePromise</a></p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var result = Promise;
+Promise = value;</code></pre></fieldset></dd>
+						<dd class="return type">function(new:Promise)</dd>
+					</dl>
+				</section>
+
+				<section>
+					<h2>Classes</h2>
+					<dl id="./utility/promise.SimplePromise" class="constructor private">
+						<dt class="name">class <a href="#./utility/promise.SimplePromise">SimplePromise.&lt;T&gt;</a></dt>
+						<dd class="description">
+							<p>Promise implementation for browsers that don't support it.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var simplePromise = new SimplePromise(resolver);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">resolver</dt>
+								<dd class="parameter type">function(function(T), function(*))</dd>
+								<dd class="parameter description"></dd>
+							</dl>
+						</dd>
+						<dd class="members">
+							<dl id="./utility/promise.SimplePromise.all" class="function static">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.all">all.&lt;T&gt;</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = SimplePromise.all(values);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">values</dt>
+										<dd class="parameter type">!Array.&lt;T|!Promise.&lt;T&gt;&gt;</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">!Promise.&lt;!Array.&lt;T&gt;&gt;</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.catch" class="function">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.catch">catch</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.catch(rejectedHandler);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">rejectedHandler</dt>
+										<dd class="parameter type">function(*):(T|Promise.&lt;T&gt;)</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">!Promise.&lt;T&gt;</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.isFulfilled" class="function">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.isFulfilled">isFulfilled</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.isFulfilled();</code></pre></fieldset></dd>
+								<dt>Returns</dt>
+								<dd class="return type">boolean</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.isPending" class="function">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.isPending">isPending</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.isPending();</code></pre></fieldset></dd>
+								<dt>Returns</dt>
+								<dd class="return type">boolean</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.isRejected" class="function">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.isRejected">isRejected</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.isRejected();</code></pre></fieldset></dd>
+								<dt>Returns</dt>
+								<dd class="return type">boolean</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.reason" class="function">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.reason">reason</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.reason();</code></pre></fieldset></dd>
+								<dt>Returns</dt>
+								<dd class="return type">*</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.resolve" class="function static">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.resolve">resolve.&lt;T&gt;</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = SimplePromise.resolve(value);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">T|!Promise.&lt;T&gt;</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">!Promise.&lt;T&gt;</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.then" class="function">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.then">then.&lt;U&gt;</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.then(fulfilledHandler, rejectedHandler);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">fulfilledHandler</dt>
+										<dd class="parameter type">?function(T):(U|Promise.&lt;U&gt;)</dd>
+										<dd class="parameter description"></dd>
+										<dt class="parameter name">rejectedHandler</dt>
+										<dd class="parameter type">?function(*):(U|Promise.&lt;U&gt;)</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">!Promise.&lt;U&gt;</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise.value" class="function">
+								<dt class="name"><a href="#./utility/promise.SimplePromise.value">value</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simplePromise.value();</code></pre></fieldset></dd>
+								<dt>Returns</dt>
+								<dd class="return type">T</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise._fulfill" class="function private">
+								<dt class="name"><a href="#./utility/promise.SimplePromise._fulfill">_fulfill</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._fulfill(value);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">T</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise._getThenMethod" class="function private static">
+								<dt class="name"><a href="#./utility/promise.SimplePromise._getThenMethod">_getThenMethod.&lt;T&gt;</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = SimplePromise._getThenMethod(obj);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">obj</dt>
+										<dd class="parameter type">!*</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">?function(function(T):(T|!Promise.&lt;T&gt;), function(*):(T|!Promise.&lt;T&gt;)):!Promise.&lt;T&gt;</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise._propagateResolution" class="function private">
+								<dt class="name"><a href="#./utility/promise.SimplePromise._propagateResolution">_propagateResolution</a></dt>
+								<dd class="description">
+									<p>Propagates the result of the current promise to all its children.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._propagateResolution();</code></pre></fieldset></dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise._reject" class="function private">
+								<dt class="name"><a href="#./utility/promise.SimplePromise._reject">_reject</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._reject(reason);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">reason</dt>
+										<dd class="parameter type">*</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromise._resolve" class="function private">
+								<dt class="name"><a href="#./utility/promise.SimplePromise._resolve">_resolve</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simplePromise._resolve(value);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">T|!Promise.&lt;T&gt;</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+				<section>
+					<h2>Enums</h2>
+					<dl id="./utility/promise.SimplePromiseState" class="enum private">
+						<dt class="name">enum <a href="#./utility/promise.SimplePromiseState">SimplePromiseState</a></dt>
+						<dd class="description">
+							<p>The state of the <a href="#./utility/promise.SimplePromise">./utility/promise.SimplePromise</a></p>
+						</dd>
+						<dd class="members">
+							<dl id="./utility/promise.SimplePromiseState.PENDING" class="member">
+								<dt class="name"><a href="#./utility/promise.SimplePromiseState.PENDING">PENDING</a> = 0</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromiseState.FULFILLED" class="member">
+								<dt class="name"><a href="#./utility/promise.SimplePromiseState.FULFILLED">FULFILLED</a> = 1</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+							</dl>
+							<dl id="./utility/promise.SimplePromiseState.REJECTED" class="member">
+								<dt class="name"><a href="#./utility/promise.SimplePromiseState.REJECTED">REJECTED</a> = 2</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</section>
+
+			</section>
+			<section>
+				<h1 id="./utility/set">Module ./utility/set</h1>
+
+				<section>
+					<h2>Variables</h2>
+					<dl id="./utility/set.Set" class="variable">
+						<dt class="name"><a href="#./utility/set.Set">Set</a></dt>
+						<dd class="description">
+							<p>Set to browser's implementation of Set if it has one, else set to <a href="#./utility/set.SimpleSet">./utility/set.SimpleSet</a></p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var result = Set;
+Set = value;</code></pre></fieldset></dd>
+						<dd class="return type">function(new:Set, !Array.&lt;T&gt;=)</dd>
+					</dl>
+				</section>
+
+				<section>
+					<h2>Classes</h2>
+					<dl id="./utility/set.SimpleSet" class="constructor private">
+						<dt class="name">class <a href="#./utility/set.SimpleSet">SimpleSet.&lt;T&gt;</a></dt>
+						<dd class="description">
+							<p>Set implementation for browsers that don't support it. Only supports Number and String elements.
+Elements are stored as properties of an object, with names derived from their type.</p>
+						</dd>
+						<dd class="usage"><fieldset><legend /><pre><code>var simpleSet = new SimpleSet(iterable);</code></pre></fieldset></dd>
+						<dd class="parameters">
+							<dl>
+								<dt class="parameter name">iterable</dt>
+								<dd class="parameter type">!Array.&lt;T&gt;=</dd>
+								<dd class="parameter description">Only an array of values is supported.</dd>
+							</dl>
+						</dd>
+						<dd class="members">
+							<dl id="./utility/set.SimpleSet.size" class="property">
+								<dt class="name"><a href="#./utility/set.SimpleSet.size">size</a></dt>
+								<dt class="getter">Getter</dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet.size;</code></pre></fieldset></dd>
+								<dd class="return type">number</dd>
+							</dl>
+							<dl id="./utility/set.SimpleSet.add" class="function">
+								<dt class="name"><a href="#./utility/set.SimpleSet.add">add</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet.add(value);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">T</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">libjass.Set.&lt;T&gt;</dd>
+								<dd class="return description">This set</dd>
+							</dl>
+							<dl id="./utility/set.SimpleSet.clear" class="function">
+								<dt class="name"><a href="#./utility/set.SimpleSet.clear">clear</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simpleSet.clear();</code></pre></fieldset></dd>
+							</dl>
+							<dl id="./utility/set.SimpleSet.forEach" class="function">
+								<dt class="name"><a href="#./utility/set.SimpleSet.forEach">forEach</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>simpleSet.forEach(callbackfn, thisArg);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">callbackfn</dt>
+										<dd class="parameter type">function(T, T, libjass.Set.&lt;T&gt;)</dd>
+										<dd class="parameter description">A function that is called with each value in the set.</dd>
+										<dt class="parameter name">thisArg</dt>
+										<dd class="parameter type">*</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+							</dl>
+							<dl id="./utility/set.SimpleSet.has" class="function">
+								<dt class="name"><a href="#./utility/set.SimpleSet.has">has</a></dt>
+								<dd class="description">
+									<p></p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet.has(value);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">T</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">boolean</dd>
+								<dd class="return description"></dd>
+							</dl>
+							<dl id="./utility/set.SimpleSet._toProperty" class="function private">
+								<dt class="name"><a href="#./utility/set.SimpleSet._toProperty">_toProperty</a></dt>
+								<dd class="description">
+									<p>Converts the given value into a property name for the internal map.</p>
+								</dd>
+								<dd class="usage"><fieldset><legend /><pre><code>var result = simpleSet._toProperty(value);</code></pre></fieldset></dd>
+								<dd class="parameters">
+									<dl>
+										<dt class="parameter name">value</dt>
+										<dd class="parameter type">T</dd>
+										<dd class="parameter description"></dd>
+									</dl>
+								</dd>
+								<dt>Returns</dt>
+								<dd class="return type">string</dd>
+								<dd class="return description"></dd>
 							</dl>
 						</dd>
 					</dl>
